@@ -109,11 +109,13 @@ const Publications = () => {
             delay: books.length * 0.1
           }} className="group">
               <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-dashed border-border hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                {/* Placeholder Cover */}
-                <div className="relative aspect-[2/3] overflow-hidden bg-secondary/50 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Clock className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
-                    <p className="text-muted-foreground font-medium">Coming Soon</p>
+                {/* Book Cover */}
+                <div className="relative aspect-[2/3] overflow-hidden">
+                  <img src={futureForwardResearch} alt="Future-Forward Research: A Quarterly Compendium" className="w-full h-full object-cover" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 bg-muted text-muted-foreground text-xs font-medium rounded-full">
+                      Coming Soon
+                    </span>
                   </div>
                 </div>
                 
