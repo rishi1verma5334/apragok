@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
+import fdpAiEducation from "@/assets/events/fdp-ai-education.jpeg";
 
 const features = [
   {
@@ -76,6 +77,77 @@ const Workshops = () => {
                 Get in Touch
               </a>
             </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Upcoming Event Section */}
+      <section className="py-16 bg-accent/10">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <Badge className="mb-4 bg-primary text-primary-foreground">
+              <Calendar size={14} className="mr-1" />
+              Upcoming Event
+            </Badge>
+            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+              AI Powered Education: Enhancing Student Engagement and Outcomes
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
+              Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
+              <span className="flex items-center gap-1">
+                <Calendar size={16} className="text-primary" />
+                April 4, 2026 · 11:00 AM – 5:30 PM
+              </span>
+              <span className="flex items-center gap-1">
+                <MapPin size={16} className="text-primary" />
+                Online (Google Meet)
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto mb-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <img 
+                src={fdpAiEducation} 
+                alt="FDP - AI Powered Education flyer" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center"
+          >
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
+              asChild
+            >
+              <a href="https://forms.gle/AMvcL4hmZSeRiXtK6" target="_blank" rel="noopener noreferrer">
+                Register Now
+              </a>
+            </Button>
+            <p className="text-sm text-muted-foreground mt-3">
+              ₹350 (Inclusive of GST) · Last date of registration: 30th March 2026
+            </p>
           </motion.div>
         </div>
       </section>
