@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        serif: ["Playfair Display", "Georgia", "serif"],
+        sans: ["DM Sans", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -96,6 +96,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "gentle-pulse": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +108,7 @@ export default {
         "slide-in-left": "slide-in-left 0.8s ease-out forwards",
         "slide-in-right": "slide-in-right 0.8s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "gentle-pulse": "gentle-pulse 3s ease-in-out infinite",
       },
     },
   },
