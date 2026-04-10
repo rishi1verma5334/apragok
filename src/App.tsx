@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import DarkModeToggle from "@/components/DarkModeToggle";
 import Index from "./pages/Index";
 import Publications from "./pages/Publications";
 import BookDetail from "./pages/BookDetail";
@@ -29,6 +30,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <DarkModeToggle />
       </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
