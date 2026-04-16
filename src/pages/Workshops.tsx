@@ -44,7 +44,6 @@ const Workshops = () => {
   };
 
   return (
-  return (
     <div className="min-h-screen bg-background">
       <Header />
       
