@@ -81,7 +81,7 @@ const Workshops = () => {
         </div>
       </section>
 
-      {/* Upcoming Event Section */}
+      {/* Past Event - FDP AI Education */}
       <section className="py-16 bg-accent/10">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -91,9 +91,9 @@ const Workshops = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <Badge className="mb-4 bg-primary text-primary-foreground">
+            <Badge variant="outline" className="mb-4 border-muted-foreground/50">
               <Calendar size={14} className="mr-1" />
-              Upcoming Event
+              Past Event
             </Badge>
             <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
               AI Powered Education: Enhancing Student Engagement and Outcomes
@@ -141,13 +141,10 @@ const Workshops = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
               asChild
             >
-              <a href="https://forms.gle/AMvcL4hmZSeRiXtK6" target="_blank" rel="noopener noreferrer">
-                Register Now
-              </a>
+              <Link to="/gallery">
+                View Event Gallery
+              </Link>
             </Button>
-            <p className="text-sm text-muted-foreground mt-3">
-              ₹350 (Inclusive of GST) · Last date of registration: 30th March 2026
-            </p>
           </motion.div>
         </div>
       </section>
