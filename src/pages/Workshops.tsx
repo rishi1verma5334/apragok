@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Users, BookOpen, Award, Target, Lightbulb, Images, Calendar, MapPin, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Users, BookOpen, Award, Target, Lightbulb, Images, Calendar, MapPin, ArrowLeft, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,6 +37,12 @@ const features = [
 ];
 
 const Workshops = () => {
+  const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
+
+  const toggleEvent = (id: string) => {
+    setExpandedEvent(prev => prev === id ? null : id);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -203,105 +210,96 @@ const Workshops = () => {
           </motion.div>
 
           {/* Event 1: FDP AI Education */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center mb-6"
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("fdp")}
+              className="w-full text-center group cursor-pointer"
             >
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
+              <h3 className="text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2">
                 AI Powered Education: Enhancing Student Engagement and Outcomes
+                <ChevronDown size={20} className={`transition-transform duration-300 ${expandedEvent === "fdp" ? "rotate-180" : ""}`} />
               </h3>
-              <p className="text-muted-foreground mb-2">
-                Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
+              <p className="text-muted-foreground text-sm">
+                April 4, 2026 · Online (Google Meet)
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
-                <span className="flex items-center gap-1">
-                  <Calendar size={16} className="text-primary" />
-                  April 4, 2026 · 11:00 AM – 5:30 PM
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin size={16} className="text-primary" />
-                  Online (Google Meet)
-                </span>
-              </div>
-            </motion.div>
-            <div className="max-w-3xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="rounded-xl overflow-hidden shadow-lg"
-              >
-                <img 
-                  src={fdpAiEducation} 
-                  alt="FDP - AI Powered Education flyer" 
-                  className="w-full h-auto"
-                />
-              </motion.div>
-            </div>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "fdp" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
+                    </p>
+                    <div className="max-w-3xl mx-auto">
+                      <div className="rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={fdpAiEducation} 
+                          alt="FDP - AI Powered Education flyer" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          {/* Divider */}
-          <div className="max-w-5xl mx-auto mb-16 border-t border-border/50" />
-
           {/* Event 2: Two-Day Research Conference */}
-          <div className="max-w-5xl mx-auto mb-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center mb-6"
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("conference")}
+              className="w-full text-center group cursor-pointer"
             >
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
+              <h3 className="text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2">
                 Two-Day Future-Forward Research Conference
+                <ChevronDown size={20} className={`transition-transform duration-300 ${expandedEvent === "conference" ? "rotate-180" : ""}`} />
               </h3>
-              <p className="text-muted-foreground mb-2">
-                Global Trends and Interdisciplinary Innovation
+              <p className="text-muted-foreground text-sm">
+                January 16-17, 2026 · Google Meet Platform
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
-                <span className="flex items-center gap-1">
-                  <Calendar size={16} className="text-primary" />
-                  January 16-17, 2026
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin size={16} className="text-primary" />
-                  Google Meet Platform
-                </span>
-              </div>
-            </motion.div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="rounded-xl overflow-hidden shadow-lg"
-              >
-                <img 
-                  src={conferenceFlyer1} 
-                  alt="Conference flyer - Call for papers and important dates" 
-                  className="w-full h-auto"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="rounded-xl overflow-hidden shadow-lg"
-              >
-                <img 
-                  src={conferenceFlyer2} 
-                  alt="Conference flyer - Submission guidelines and sub-themes" 
-                  className="w-full h-auto"
-                />
-              </motion.div>
-            </div>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "conference" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Global Trends and Interdisciplinary Innovation
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={conferenceFlyer1} 
+                          alt="Conference flyer - Call for papers and important dates" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                      <div className="rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={conferenceFlyer2} 
+                          alt="Conference flyer - Submission guidelines and sub-themes" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <motion.div
@@ -309,7 +307,7 @@ const Workshops = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center"
+            className="text-center mt-10"
           >
             <Button 
               size="lg" 
