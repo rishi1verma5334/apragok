@@ -9,6 +9,8 @@ import Footer from "@/components/Footer";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
 import fdpAiEducation from "@/assets/events/fdp-ai-education.jpeg";
+import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
+import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
 
 const features = [
   {
@@ -81,7 +83,103 @@ const Workshops = () => {
         </div>
       </section>
 
-      {/* Past Event - FDP AI Education */}
+      {/* Upcoming Event - Spectrum of Knowledge Conference 2026 */}
+      <section className="py-16 bg-primary/10 border-y-2 border-primary/20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <Badge className="mb-4 bg-primary text-primary-foreground">
+              <Calendar size={14} className="mr-1" />
+              Upcoming Event
+            </Badge>
+            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+              Spectrum of Knowledge Conference 2026
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
+              Promoting Excellence in Multidisciplinary Research — Call for Papers
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
+              <span className="flex items-center gap-1">
+                <Calendar size={16} className="text-primary" />
+                May 23, 2026
+              </span>
+              <span className="flex items-center gap-1">
+                <MapPin size={16} className="text-primary" />
+                National Prestige School, Ghaziabad
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <img 
+                src={spectrumPage1} 
+                alt="Spectrum of Knowledge Conference 2026 - Call for Papers" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <img 
+                src={spectrumPage2} 
+                alt="Spectrum of Knowledge Conference 2026 - Guidelines and Sub-themes" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center space-y-4"
+          >
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
+                asChild
+              >
+                <a href="https://forms.gle/2SnropdcJtWfrisN7" target="_blank" rel="noopener noreferrer">
+                  Register for Paper Presentation
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-10 py-6 text-lg"
+                asChild
+              >
+                <a href="https://forms.gle/xMCWwCpMXBiiCUTAA" target="_blank" rel="noopener noreferrer">
+                  Register for Participation Only
+                </a>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              🎉 Early Bird Discount: 20% off if you register before May 5, 2026!
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
       <section className="py-16 bg-accent/10">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
