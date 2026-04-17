@@ -237,13 +237,12 @@ const Workshops = () => {
                     <p className="text-muted-foreground mb-4">
                       Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
                     </p>
-                    <div className="max-w-5xl mx-auto overflow-hidden">
-                      <div className="rounded-xl overflow-hidden shadow-lg inline-block w-full">
+                    <div className="max-w-4xl mx-auto">
+                      <div className="rounded-xl overflow-hidden shadow-lg">
                         <img 
                           src={fdpAiEducation} 
                           alt="FDP - AI Powered Education flyer" 
-                          className="w-full h-auto -rotate-90 sm:rotate-0"
-                          style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
+                          className="w-full h-auto"
                         />
                       </div>
                     </div>
