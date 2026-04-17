@@ -9,7 +9,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpeg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpeg";
-import fdpAiEducation from "@/assets/events/fdp-ai-education.jpeg";
+import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.png";
+import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.png";
 import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
 import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
 
@@ -237,11 +238,18 @@ const Workshops = () => {
                     <p className="text-muted-foreground mb-4">
                       Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
                     </p>
-                    <div className="max-w-4xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-6">
                       <div className="rounded-xl overflow-hidden shadow-lg">
                         <img 
-                          src={fdpAiEducation} 
-                          alt="FDP - AI Powered Education flyer" 
+                          src={fdpAiEducationPage1} 
+                          alt="FDP - AI Powered Education flyer page 1" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                      <div className="rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={fdpAiEducationPage2} 
+                          alt="FDP - AI Powered Education flyer page 2" 
                           className="w-full h-auto"
                         />
                       </div>
