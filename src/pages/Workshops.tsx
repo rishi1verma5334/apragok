@@ -174,7 +174,7 @@ const Workshops = () => {
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-10 py-6 text-lg"
                 asChild
               >
-                <a href="https://forms.gle/xMCWwCpMXBiiCUTAA" target="_blank" rel="noopener noreferrer">
+                <a href="https://forms.gle/UK86PXQbwZuwuDVH7" target="_blank" rel="noopener noreferrer">
                   Register for Participation Only
                 </a>
               </Button>
