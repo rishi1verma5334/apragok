@@ -15,7 +15,6 @@ import workshop20 from "@/assets/gallery/workshop-20.jpeg";
 import workshop21 from "@/assets/gallery/workshop-21.jpeg";
 import workshop22 from "@/assets/gallery/workshop-22.jpeg";
 
-import workshop24 from "@/assets/gallery/workshop-24.jpeg";
 import conferenceDay1 from "@/assets/gallery/conference-day1.jpeg";
 import conferenceDay2 from "@/assets/gallery/conference-day2.jpeg";
 
@@ -91,12 +90,6 @@ const galleryImages = [
     title: "Primary School Event",
     description: "Engaging young minds in educational activities",
     image: workshop22,
-  },
-  {
-    id: 24,
-    title: "Training Conference",
-    description: "Professional development session for teachers",
-    image: workshop24,
   },
 ];
 
