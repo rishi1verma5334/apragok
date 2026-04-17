@@ -135,6 +135,8 @@ const Workshops = () => {
                 src={spectrumPage1} 
                 alt="Spectrum of Knowledge Conference 2026 - Call for Papers" 
                 className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
             <motion.div
@@ -148,6 +150,8 @@ const Workshops = () => {
                 src={spectrumPage2} 
                 alt="Spectrum of Knowledge Conference 2026 - Guidelines and Sub-themes" 
                 className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -244,6 +248,8 @@ const Workshops = () => {
                           src={fdpAiEducationPage1} 
                           alt="FDP - AI Powered Education flyer page 1" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                       <div className="rounded-xl overflow-hidden shadow-lg">
@@ -251,6 +257,8 @@ const Workshops = () => {
                           src={fdpAiEducationPage2} 
                           alt="FDP - AI Powered Education flyer page 2" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                     </div>
@@ -294,6 +302,8 @@ const Workshops = () => {
                           src={conferenceFlyer1} 
                           alt="Conference flyer - Call for papers and important dates" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                       <div className="rounded-xl overflow-hidden shadow-lg">
@@ -301,6 +311,8 @@ const Workshops = () => {
                           src={conferenceFlyer2} 
                           alt="Conference flyer - Submission guidelines and sub-themes" 
                           className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
                         />
                       </div>
                     </div>
