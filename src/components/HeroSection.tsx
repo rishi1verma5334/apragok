@@ -36,6 +36,7 @@ const preloadImage = (src: string) =>
 const HeroSection = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPreloading, setIsPreloading] = useState(false);
   const timerRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -45,9 +46,10 @@ const HeroSection = () => {
       if (timerRef.current) window.clearTimeout(timerRef.current);
       timerRef.current = window.setTimeout(async () => {
         const nextIndex = (currentSlide + 1) % slideshowImages.length;
-        // Wait until the next image is fully loaded before swapping
+        setIsPreloading(true);
         await preloadImage(slideshowImages[nextIndex]);
         if (cancelled) return;
+        setIsPreloading(false);
         setCurrentSlide(nextIndex);
       }, SLIDE_INTERVAL);
     };
@@ -88,6 +90,38 @@ const HeroSection = () => {
         {/* Warm gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent mix-blend-overlay" />
+
+        {/* Subtle shimmer skeleton overlay while next slide is loading */}
+        <AnimatePresence>
+          {isPreloading && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0 pointer-events-none"
+              aria-hidden="true"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent bg-[length:200%_100%] animate-[shimmer_1.6s_linear_infinite]" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Thin progress bar at the bottom of the hero */}
+        <AnimatePresence>
+          {isPreloading && (
+            <motion.div
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10 overflow-hidden"
+              aria-hidden="true"
+            >
+              <div className="h-full w-1/3 bg-gradient-to-r from-transparent via-primary to-transparent animate-[slide-progress_1.2s_ease-in-out_infinite]" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
