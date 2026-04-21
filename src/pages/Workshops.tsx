@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Lightbox from "@/components/Lightbox";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpg";
 import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
@@ -39,10 +40,13 @@ const features = [
 
 const Workshops = () => {
   const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   const toggleEvent = (id: string) => {
     setExpandedEvent(prev => prev === id ? null : id);
   };
+
+  const openLightbox = (src: string, alt: string) => setLightbox({ src, alt });
 
   return (
     <div className="min-h-screen bg-background">
@@ -129,7 +133,8 @@ const Workshops = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl overflow-hidden shadow-lg"
+              onClick={() => openLightbox(spectrumPage1, "Spectrum of Knowledge Conference 2026 - Call for Papers")}
+              className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
             >
               <img 
                 src={spectrumPage1} 
@@ -144,7 +149,8 @@ const Workshops = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="rounded-xl overflow-hidden shadow-lg"
+              onClick={() => openLightbox(spectrumPage2, "Spectrum of Knowledge Conference 2026 - Guidelines and Sub-themes")}
+              className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
             >
               <img 
                 src={spectrumPage2} 
@@ -243,7 +249,10 @@ const Workshops = () => {
                       Faculty Development Program (FDP) — Step Into the Future of Teaching: Be an AI-Enabled Educator
                     </p>
                     <div className="grid md:grid-cols-2 gap-6">
-                      <div className="rounded-xl overflow-hidden shadow-lg">
+                      <div
+                        onClick={() => openLightbox(fdpAiEducationPage1, "FDP - AI Powered Education flyer page 1")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
                         <img 
                           src={fdpAiEducationPage1} 
                           alt="FDP - AI Powered Education flyer page 1" 
@@ -252,7 +261,10 @@ const Workshops = () => {
                 decoding="async"
                         />
                       </div>
-                      <div className="rounded-xl overflow-hidden shadow-lg">
+                      <div
+                        onClick={() => openLightbox(fdpAiEducationPage2, "FDP - AI Powered Education flyer page 2")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
                         <img 
                           src={fdpAiEducationPage2} 
                           alt="FDP - AI Powered Education flyer page 2" 
@@ -297,7 +309,10 @@ const Workshops = () => {
                       Global Trends and Interdisciplinary Innovation
                     </p>
                     <div className="grid md:grid-cols-2 gap-6">
-                      <div className="rounded-xl overflow-hidden shadow-lg">
+                      <div
+                        onClick={() => openLightbox(conferenceFlyer1, "Conference flyer - Call for papers and important dates")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
                         <img 
                           src={conferenceFlyer1} 
                           alt="Conference flyer - Call for papers and important dates" 
@@ -306,7 +321,10 @@ const Workshops = () => {
                 decoding="async"
                         />
                       </div>
-                      <div className="rounded-xl overflow-hidden shadow-lg">
+                      <div
+                        onClick={() => openLightbox(conferenceFlyer2, "Conference flyer - Submission guidelines and sub-themes")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
                         <img 
                           src={conferenceFlyer2} 
                           alt="Conference flyer - Submission guidelines and sub-themes" 
@@ -449,6 +467,7 @@ const Workshops = () => {
       </section>
 
       <Footer />
+      <Lightbox src={lightbox?.src ?? null} alt={lightbox?.alt} onClose={() => setLightbox(null)} />
     </div>
   );
 };
