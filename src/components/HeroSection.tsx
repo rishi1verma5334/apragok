@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, BookOpen, Images, Users } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -23,34 +23,65 @@ import workshop15 from "@/assets/gallery/workshop-15.jpeg";
 const allImages = [workshop1, workshop2, workshop3, workshop4, workshop5, workshop6, workshop7, workshop8, workshop9, workshop10, workshop11, workshop12, workshop13, workshop14, workshop15];
 const slideshowImages = [...allImages].sort(() => Math.random() - 0.5);
 
+const SLIDE_INTERVAL = 5500;
+
+const preloadImage = (src: string) =>
+  new Promise<void>((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = () => resolve();
+    img.src = src;
+  });
+
 const HeroSection = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const timerRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    let cancelled = false;
+
+    const scheduleNext = () => {
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+      timerRef.current = window.setTimeout(async () => {
+        const nextIndex = (currentSlide + 1) % slideshowImages.length;
+        // Wait until the next image is fully loaded before swapping
+        await preloadImage(slideshowImages[nextIndex]);
+        if (cancelled) return;
+        setCurrentSlide(nextIndex);
+      }, SLIDE_INTERVAL);
+    };
+
+    scheduleNext();
+
+    // Warm up the image after next so transitions feel instant
+    const lookahead = (currentSlide + 2) % slideshowImages.length;
+    preloadImage(slideshowImages[lookahead]);
+
+    return () => {
+      cancelled = true;
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+    };
+  }, [currentSlide]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Slideshow Background */}
-      <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
+      <div className="absolute inset-0 bg-background">
+        <AnimatePresence mode="sync">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
             className="absolute inset-0"
           >
-            <img 
-              src={slideshowImages[currentSlide]} 
-              alt="Workshop background" 
+            <img
+              src={slideshowImages[currentSlide]}
+              alt="Workshop background"
               className="w-full h-full object-cover"
+              decoding="async"
             />
           </motion.div>
         </AnimatePresence>
