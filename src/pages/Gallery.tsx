@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Images } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Lightbox from "@/components/Lightbox";
 
 import workshop1 from "@/assets/gallery/workshop-1.jpeg";
 import workshop2 from "@/assets/gallery/workshop-2.jpeg";
@@ -108,6 +110,8 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -153,13 +157,22 @@ const Gallery = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-xl bg-secondary/30 aspect-[4/3] cursor-pointer"
+                onClick={() => setLightbox({ src: image.image, alt: image.title })}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setLightbox({ src: image.image, alt: image.title });
+                  }
+                }}
+                className="group relative overflow-hidden rounded-xl bg-secondary/30 aspect-[4/3] cursor-zoom-in"
               >
                 {/* Gallery Image */}
                 <img 
                   src={image.image} 
                   alt={image.title}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 
                 {/* Overlay */}
@@ -189,6 +202,7 @@ const Gallery = () => {
       </section>
 
       <Footer />
+      <Lightbox src={lightbox?.src ?? null} alt={lightbox?.alt} onClose={() => setLightbox(null)} />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Lightbox from "@/components/Lightbox";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpg";
 import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
@@ -39,10 +40,13 @@ const features = [
 
 const Workshops = () => {
   const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   const toggleEvent = (id: string) => {
     setExpandedEvent(prev => prev === id ? null : id);
   };
+
+  const openLightbox = (src: string, alt: string) => setLightbox({ src, alt });
 
   return (
     <div className="min-h-screen bg-background">
