@@ -175,7 +175,7 @@ const Workshops = () => {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg"
                 asChild
               >
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRJlVEJUOoZQ7CwuxLFApyRlIK7ZeEu0293Hv8PAfc6owB7w/viewform" target="_blank" rel="noopener noreferrer">
+                <a href="https://forms.gle/2SnropdcJtWfrisN7" target="_blank" rel="noopener noreferrer">
                   Register for Paper Presentation
                 </a>
               </Button>
