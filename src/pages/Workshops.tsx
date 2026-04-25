@@ -72,7 +72,7 @@ const Workshops = () => {
           >
             <Badge variant="secondary" className="mb-4">
               <Users size={14} className="mr-1" />
-              Workshops & Training
+              Workshops & Conferences
             </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-6">
               <span className="text-foreground">Transform Your </span>
