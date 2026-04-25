@@ -30,18 +30,18 @@ const AboutSection = () => {
       detail: "Handles contract management, regulatory compliance, accounting, bookkeeping, taxation, and overall fiscal responsibility."
     },
     {
-      icon: GraduationCap,
-      role: "Training Head",
-      name: "Dr. Keemti Gaur",
-      description: "Educational Programs Lead planning professional development initiatives.",
-      detail: "Organizes workshops, seminars, and specialized training programs that empower participants with practical skills and knowledge."
-    },
-    {
       icon: PenLine,
       role: "Editorial Head",
-      name: "Mrs. Himani Raizada",
+      name: "Dr. Keemti Gaur",
       description: "Content and Creative Supervisor overseeing all publications.",
       detail: "Supervises content writing, editing, and graphic design to ensure every publication meets the highest quality standards."
+    },
+    {
+      icon: GraduationCap,
+      role: "Training Head",
+      name: "Mrs. Himani Raizada",
+      description: "Educational Programs Lead planning professional development initiatives.",
+      detail: "Organizes workshops, seminars, and specialized training programs that empower participants with practical skills and knowledge."
     },
     {
       icon: TrendingUp,
