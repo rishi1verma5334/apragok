@@ -117,7 +117,7 @@ const Gallery = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
@@ -134,11 +134,11 @@ const Gallery = () => {
               <Images size={14} className="mr-1" />
               Photo Gallery
             </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-5 sm:mb-6 leading-tight">
               <span className="text-foreground">Moments from Our </span>
               <span className="text-primary">Workshops</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Relive the memorable experiences from our past workshops, training sessions, 
               and collaborative events that have empowered countless individuals.
             </p>
@@ -147,9 +147,9 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="pb-16 pt-4 sm:pt-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {galleryImages.map((image, index) => (
               <motion.div
                 key={image.id}

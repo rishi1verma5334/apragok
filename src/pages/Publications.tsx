@@ -27,7 +27,7 @@ const Publications = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary/50 to-background">
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -44,10 +44,10 @@ const Publications = () => {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-4 leading-tight">
               Our <span className="text-primary">Publications</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Explore our collection of transformative books designed to inspire, educate, and empower educators and learners alike.
             </p>
           </motion.div>
@@ -55,9 +55,9 @@ const Publications = () => {
       </section>
 
       {/* Books Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {books.map((book, index) => <motion.div key={book.id} initial={{
             opacity: 0,
             y: 30

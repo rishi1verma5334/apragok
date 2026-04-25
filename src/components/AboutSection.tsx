@@ -95,7 +95,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-20"
         >
           <span className="inline-block text-primary font-medium tracking-[0.2em] uppercase text-xs mb-4 px-5 py-2 bg-primary/8 rounded-full border border-primary/15">
             About Us
@@ -110,12 +110,12 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Leadership Section */}
-        <div className="mb-24">
+        <div className="mb-16 sm:mb-24">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl font-serif font-bold text-center text-foreground mb-12"
+            className="text-xl sm:text-2xl font-serif font-bold text-center text-foreground mb-8 sm:mb-12"
           >
             Our Leadership Team
           </motion.h3>
@@ -125,11 +125,11 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="group max-w-2xl mx-auto mb-8"
+            className="group max-w-2xl mx-auto mb-6 sm:mb-8"
           >
             <div className="relative h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-500" />
-              <div className="relative glass-card rounded-3xl p-8 border-2 border-primary/15 h-full hover:premium-shadow transition-all duration-500 hover:-translate-y-1">
+              <div className="relative glass-card rounded-3xl p-6 sm:p-8 border-2 border-primary/15 h-full hover:premium-shadow transition-all duration-500 hover:-translate-y-1">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500 flex-shrink-0">
                     <Crown className="text-primary-foreground" size={32} />
@@ -190,15 +190,15 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-4xl mx-auto text-center mb-24"
+          className="max-w-4xl mx-auto text-center mb-16 sm:mb-24"
         >
-          <div className="glass-card rounded-3xl p-12">
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+          <div className="glass-card rounded-3xl p-6 sm:p-10 lg:p-12">
+            <p className="text-base sm:text-lg text-muted-foreground mb-5 sm:mb-6 leading-relaxed">
               At APRA, we believe that knowledge is the most powerful tool for transformation.
               Our carefully curated publications cover a wide spectrum of subjects, designed
               to enlighten minds and inspire action.
             </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Our workshops are crafted to provide immersive learning experiences,
               combining theoretical foundations with practical applications. Whether you're
               a student, professional, or lifelong learner, APRA has something valuable to offer.
@@ -216,7 +216,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-2xl font-serif font-bold text-center text-foreground mb-12"
+          className="text-xl sm:text-2xl font-serif font-bold text-center text-foreground mb-8 sm:mb-12"
         >
           What Drives Us
         </motion.h3>

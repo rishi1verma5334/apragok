@@ -73,7 +73,7 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -82,7 +82,7 @@ const ServicesSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative h-full glass-card rounded-2xl p-8 overflow-hidden hover:premium-shadow transition-all duration-500 hover:-translate-y-2">
+              <div className="relative h-full glass-card rounded-2xl p-6 sm:p-8 overflow-hidden hover:premium-shadow transition-all duration-500 hover:-translate-y-2">
                 {/* Shimmer on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shimmer" />
                 

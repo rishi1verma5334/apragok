@@ -59,8 +59,8 @@ const BookDetail = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary/50 to-background">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="pt-28 sm:pt-32 pb-8 sm:pb-12 bg-gradient-to-b from-secondary/50 to-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,9 +77,9 @@ const BookDetail = () => {
       </section>
 
       {/* Book Content */}
-      <section className="py-8 pb-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+      <section className="pt-4 pb-16 sm:pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start max-w-6xl mx-auto">
             {/* Book Cover */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -109,7 +109,7 @@ const BookDetail = () => {
                   <Tag size={14} />
                   {book.category}
                 </span>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 leading-tight">
                   {book.title}
                 </h1>
                 <p className="text-lg text-muted-foreground flex items-center gap-2">
@@ -180,7 +180,7 @@ const BookDetail = () => {
                     Read the Book
                   </h2>
                 </div>
-                <div className="aspect-[4/5] md:aspect-[16/10]">
+                <div className="aspect-[3/4] sm:aspect-[4/5] md:aspect-[16/10]">
                   <iframe
                     src={book.pdfUrl}
                     className="w-full h-full"
