@@ -83,7 +83,7 @@ const HeroSection = () => {
   }, [currentSlide]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section id="home" className="min-h-[100svh] flex items-center justify-center relative overflow-hidden pt-24 sm:pt-28 pb-16">
       {/* Slideshow Background */}
       <div className="absolute inset-0 bg-background">
         <AnimatePresence mode="sync">
@@ -140,8 +140,8 @@ const HeroSection = () => {
         </AnimatePresence>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -153,7 +153,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-md rounded-full text-sm text-primary-foreground mb-8 border border-primary/25"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-primary/15 backdrop-blur-md rounded-full text-xs sm:text-sm text-primary-foreground mb-6 sm:mb-8 border border-primary/25"
             >
               <BookOpen size={16} className="text-gold" />
               <span className="font-medium tracking-wide">Inspiring Minds, Empowering Futures</span>
@@ -163,7 +163,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold leading-[0.95] mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-serif font-bold leading-[1.05] sm:leading-[0.95] mb-6 sm:mb-8"
             >
               <span className="text-white">APRA:</span>
               <br />
@@ -176,7 +176,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-xl text-white/75 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light"
+              className="text-base sm:text-lg lg:text-xl text-white/75 mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light"
             >
               Publishing transformative books and conducting insightful workshops, seminars and trainings.
             </motion.p>
@@ -185,30 +185,30 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start"
             >
-              <Link to="/publications">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
-                  <BookOpen className="mr-2" size={20} />
+              <Link to="/publications" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base font-medium px-6 sm:px-8 lg:px-10 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+                  <BookOpen className="mr-2" size={18} />
                   Explore Publications
                 </Button>
               </Link>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground text-sm sm:text-base font-medium px-6 sm:px-8 lg:px-10 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
                 onClick={() => navigate('/workshops')}
               >
-                <Users className="mr-2" size={20} />
+                <Users className="mr-2" size={18} />
                 Join Workshops
               </Button>
-              <Link to="/gallery">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground text-base font-medium px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
+              <Link to="/gallery" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground text-sm sm:text-base font-medium px-6 sm:px-8 lg:px-10 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
                 >
-                  <Images className="mr-2" size={20} />
+                  <Images className="mr-2" size={18} />
                   View Event Gallery
                 </Button>
               </Link>
@@ -220,7 +220,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="relative flex items-center justify-center"
+            className="relative hidden md:flex items-center justify-center"
           >
             <div className="relative">
               {/* Decorative rings */}
@@ -241,7 +241,7 @@ const HeroSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="relative z-10"
               >
-                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary/20 warm-glow">
+                <div className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary/20 warm-glow">
                   <img src={apraLogo} alt="APRA - Group of Knowledge" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
@@ -271,7 +271,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="mt-16 flex justify-center"
+          className="mt-10 sm:mt-16 hidden sm:flex justify-center"
         >
           <motion.button
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
