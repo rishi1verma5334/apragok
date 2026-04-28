@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import emergingTrendsEducation from "@/assets/books/emerging-trends-education.jpeg";
 import dincharyaSanatanDharma from "@/assets/books/dincharya-sanatan-dharma.jpeg";
+import futureForwardResearch from "@/assets/books/future-forward-research.jpeg";
 
 const booksData = [
   {
@@ -43,6 +44,24 @@ const booksData = [
     pdfUrl: "/books/dincharya-sanatan-dharma.pdf",
     buyUrl: "https://wa.me/message/PQ6G2FPVROSKH1",
     buyLabel: "Buy via WhatsApp"
+  },
+  {
+    id: 3,
+    slug: "future-forward-research",
+    title: "Future-Forward Research: A Quarterly Compendium",
+    author: "APRA Group of Knowledge",
+    cover: futureForwardResearch,
+    category: "Research",
+    description: "A quarterly compendium showcasing forward-thinking research, emerging ideas, and scholarly contributions across disciplines. This publication brings together rigorous academic inquiry and practical insights to spark dialogue and drive progress.",
+    highlights: [
+      "Cutting-edge interdisciplinary research",
+      "Quarterly insights from leading scholars",
+      "Emerging ideas and innovations",
+      "Practical applications of academic study"
+    ],
+    pdfUrl: "",
+    buyUrl: "https://forms.gle/JzWU2igJZjAZNL9h9",
+    buyLabel: "Buy Now"
   }
 ];
 

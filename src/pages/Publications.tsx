@@ -21,6 +21,13 @@ const books = [{
   author: "APRA Group of Knowledge",
   cover: dincharyaSanatanDharma,
   category: "Spirituality"
+}, {
+  id: 3,
+  slug: "future-forward-research",
+  title: "Future-Forward Research: A Quarterly Compendium",
+  author: "APRA Group of Knowledge",
+  cover: futureForwardResearch,
+  category: "Research"
 }];
 const Publications = () => {
   return <div className="min-h-screen bg-background">
@@ -96,38 +103,6 @@ const Publications = () => {
                   </div>
                 </Link>
               </motion.div>)}
-            
-            {/* Coming Soon Card */}
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: books.length * 0.1
-          }} className="group">
-              <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-dashed border-border hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                {/* Book Cover */}
-                <div className="relative aspect-[2/3] overflow-hidden">
-                  <img src={futureForwardResearch} alt="Future-Forward Research: A Quarterly Compendium" className="w-full h-full object-cover" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-muted text-muted-foreground text-xs font-medium rounded-full">
-                      Coming Soon
-                    </span>
-                  </div>
-                </div>
-                
-                {/* Card Info */}
-                <div className="p-5 flex-1 flex flex-col justify-center">
-                  <h3 className="text-lg font-serif font-semibold text-muted-foreground mb-2">Coming Soon: Future-Forward Research: A Quarterly Compendium</h3>
-                  <p className="text-muted-foreground/70 text-sm">
-                    Stay tuned for upcoming publications
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
