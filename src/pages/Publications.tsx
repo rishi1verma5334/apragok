@@ -21,6 +21,13 @@ const books = [{
   author: "APRA Group of Knowledge",
   cover: dincharyaSanatanDharma,
   category: "Spirituality"
+}, {
+  id: 3,
+  slug: "future-forward-research",
+  title: "Future-Forward Research: A Quarterly Compendium",
+  author: "APRA Group of Knowledge",
+  cover: futureForwardResearch,
+  category: "Research"
 }];
 const Publications = () => {
   return <div className="min-h-screen bg-background">
