@@ -1,15 +1,26 @@
 import { motion } from "framer-motion";
 import { BookOpen, Mail, Phone, Facebook, MessageCircle, Instagram } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import apraLogo from "@/assets/apra-logo.jpeg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", section: "home" },
+    { name: "About", section: "about" },
+    { name: "Services", section: "services" },
+    { name: "Contact", section: "contact" },
   ];
+
+  const handleQuickLink = (section: string) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: section } });
+    } else {
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const services = ["Book Publications", "Workshops", "Training Programs", "Consulting"];
 
   return (
