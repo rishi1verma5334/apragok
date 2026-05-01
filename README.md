@@ -29,37 +29,6 @@ This is the official website for **APRA: Group of Knowledge**, designed to repre
 - [Node.js](https://nodejs.org/) (v18 or above recommended)
 - npm or yarn
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/rishi1verma5334/apragok.git
-
-# Navigate to the project directory
-cd apragok
-
-# Install dependencies
-npm install
-```
-
-### Running Locally
-
-```bash
-npm run dev
-```
-
-The app will be available at `http://localhost:5173` by default.
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-The optimized output will be in the `dist/` folder, ready for deployment.
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -108,4 +77,4 @@ This project is proprietary and built exclusively for **APRA: Group of Knowledge
 
 ---
 
-*Built with ❤️ for APRA: Group of Knowledge*
+*Built by Rishi Verma for APRA: Group of Knowledge*
