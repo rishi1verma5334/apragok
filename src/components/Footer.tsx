@@ -65,9 +65,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map(link => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-sm opacity-60 hover:opacity-100 transition-all duration-300 hover:translate-x-1 inline-block">
+                  <button onClick={() => handleQuickLink(link.section)} className="text-sm opacity-60 hover:opacity-100 transition-all duration-300 hover:translate-x-1 inline-block text-left">
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
