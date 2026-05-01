@@ -59,7 +59,7 @@ const booksData = [
       "Emerging ideas and innovations",
       "Practical applications of academic study"
     ],
-    pdfUrl: "",
+    pdfUrl: "/books/future-forward-research.pdf",
     buyUrl: "https://forms.gle/JzWU2igJZjAZNL9h9",
     buyLabel: "Buy Now"
   }
