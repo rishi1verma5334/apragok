@@ -170,10 +170,9 @@ const Publications = () => {
                 </Button>
               </a>
             </div>
-              <p className="text-xs text-muted-foreground mt-4">
-                Click above to access the official submission form
-              </p>
-            </div>
+            <p className="text-xs text-muted-foreground mt-4 text-center">
+              Click above to view full chapter list, guidelines, and submission details
+            </p>
           </motion.div>
         </div>
       </section>
