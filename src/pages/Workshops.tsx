@@ -176,7 +176,7 @@ const Workshops = () => {
                 asChild
               >
                 <a href="https://forms.gle/EdyyUCf5pUSkeSpR7" target="_blank" rel="noopener noreferrer">
-                  Register for Paper Presentation
+                  Register for Paper Presentation and Publication
                 </a>
               </Button>
               <Button 
