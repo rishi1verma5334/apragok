@@ -146,24 +146,33 @@ const Publications = () => {
               </div>
             </div>
 
-            <div className="text-center">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScyYzBhQRwd7IlVhPyAVakAwh0_x07jtqvuGhNvQCXiAKKU5Q/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className="text-center flex flex-col sm:flex-row gap-3 justify-center">
+              <Link to="/publications/call-for-chapters">
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg"
                 >
                   <GraduationCap className="mr-2" size={20} />
-                  Submit Your Chapter
+                  View Full Details
+                </Button>
+              </Link>
+              <a
+                href="https://forms.gle/emyKcs5f8j9JBpgT9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full px-8"
+                >
+                  Reserve Your Chapter
                 </Button>
               </a>
-              <p className="text-xs text-muted-foreground mt-4">
-                Click above to access the official submission form
-              </p>
             </div>
+            <p className="text-xs text-muted-foreground mt-4 text-center">
+              Click above to view full chapter list, guidelines, and submission details
+            </p>
           </motion.div>
         </div>
       </section>
