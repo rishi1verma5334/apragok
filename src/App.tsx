@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Publications from "./pages/Publications";
 import BookDetail from "./pages/BookDetail";
 import Workshops from "./pages/Workshops";
+import CallForChapters from "./pages/CallForChapters";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/publications" element={<Publications />} />
           <Route path="/publications/:slug" element={<BookDetail />} />
           <Route path="/workshops" element={<Workshops />} />
+          <Route path="/publications/call-for-chapters" element={<CallForChapters />} />
           <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
