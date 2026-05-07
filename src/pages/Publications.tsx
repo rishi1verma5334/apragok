@@ -8,6 +8,13 @@ import emergingTrendsEducation from "@/assets/books/emerging-trends-education.jp
 import dincharyaSanatanDharma from "@/assets/books/dincharya-sanatan-dharma.jpeg";
 import futureForwardResearch from "@/assets/books/future-forward-research.jpeg";
 const books = [{
+  id: 3,
+  slug: "future-forward-research",
+  title: "Future-Forward Research: A Quarterly Compendium",
+  author: "APRA Group of Knowledge",
+  cover: futureForwardResearch,
+  category: "Research"
+}, {
   id: 1,
   slug: "emerging-trends-education",
   title: "Emerging Trends and Issues in Education",
@@ -21,13 +28,6 @@ const books = [{
   author: "APRA Group of Knowledge",
   cover: dincharyaSanatanDharma,
   category: "Spirituality"
-}, {
-  id: 3,
-  slug: "future-forward-research",
-  title: "Future-Forward Research: A Quarterly Compendium",
-  author: "APRA Group of Knowledge",
-  cover: futureForwardResearch,
-  category: "Research"
 }];
 const Publications = () => {
   return <div className="min-h-screen bg-background">
