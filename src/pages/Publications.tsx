@@ -107,6 +107,67 @@ const Publications = () => {
         </div>
       </section>
 
+      {/* Call for Chapters Section */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-primary/10 border-y border-border/50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
+                <FileEdit size={16} className="text-primary" />
+                <span className="text-sm font-medium text-primary">Call for Book Chapters</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+                Contribute to Our <span className="text-primary">Upcoming Edited Book</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                We invite <span className="font-semibold text-foreground">Assistant Professors, Associate Professors, and Professors</span> to contribute original chapters to our forthcoming edited volume.
+              </p>
+            </div>
+
+            <div className="bg-card rounded-2xl p-6 sm:p-8 border border-border/50 shadow-lg mb-8">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  "Original, unpublished research contributions",
+                  "Open to Assistant, Associate & Full Professors",
+                  "Peer-reviewed editorial process",
+                  "ISBN-published edited volume",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle2 size={20} className="text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScyYzBhQRwd7IlVhPyAVakAwh0_x07jtqvuGhNvQCXiAKKU5Q/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg"
+                >
+                  <GraduationCap className="mr-2" size={20} />
+                  Submit Your Chapter
+                </Button>
+              </a>
+              <p className="text-xs text-muted-foreground mt-4">
+                Click above to access the official submission form
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
