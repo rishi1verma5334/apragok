@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Mail, Phone, Facebook, MessageCircle, Instagram } from "lucide-react";
+import { BookOpen, Mail, Phone, MessageCircle, Instagram } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import apraLogo from "@/assets/apra-logo.jpeg";
 

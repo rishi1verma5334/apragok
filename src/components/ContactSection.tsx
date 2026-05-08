@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, Facebook, Instagram, MessageCircle, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, Instagram, MessageCircle, ArrowUpRight } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -23,11 +23,6 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    {
-      icon: Facebook,
-      title: "Facebook",
-      href: "https://www.facebook.com/share/17bUBhU3y9/",
-    },
     {
       icon: Instagram,
       title: "Instagram",
