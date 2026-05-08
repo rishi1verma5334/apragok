@@ -208,12 +208,6 @@ const CallForChapters = () => {
                   Reserve Your Chapter
                 </Button>
               </a>
-              <a href="#dates">
-                <Button size="lg" variant="outline" className="rounded-full px-8">
-                  <Calendar className="mr-2" size={18} />
-                  View Important Dates
-                </Button>
-              </a>
             </div>
           </motion.div>
         </div>
