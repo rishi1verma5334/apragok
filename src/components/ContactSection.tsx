@@ -26,7 +26,7 @@ const ContactSection = () => {
     {
       icon: Facebook,
       title: "Facebook",
-      href: "https://www.facebook.com/share/1BczkAnfSP/",
+      href: "https://www.facebook.com/share/17bUBhU3y9/",
     },
     {
       icon: Instagram,

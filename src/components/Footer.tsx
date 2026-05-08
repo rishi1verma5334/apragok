@@ -108,7 +108,7 @@ const Footer = () => {
                 <span className="text-sm opacity-70">+91 8766251527</span>
               </li>
               <li className="flex items-center gap-4 pt-2">
-                <a href="https://www.facebook.com/share/1BczkAnfSP/" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity" title="Facebook">
+                <a href="https://www.facebook.com/share/17bUBhU3y9/" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity" title="Facebook">
                   <Facebook size={18} />
                 </a>
                 <a href="https://www.instagram.com/apra.gok?igsh=M2I1OWFocnduZ3V4" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity" title="Instagram">
