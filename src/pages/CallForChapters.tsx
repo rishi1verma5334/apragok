@@ -448,11 +448,11 @@ const CallForChapters = () => {
               </a>
               <div className="flex items-center justify-center gap-2 p-4 bg-card rounded-xl border border-border/50">
                 <Phone size={18} className="text-primary" />
-                <span className="text-sm text-foreground">9716245200</span>
+                <span className="text-sm text-foreground">8766251527</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Additional contact numbers: <span className="text-foreground font-medium">8766251527, 9990107533</span>
+              Additional contact numbers: <span className="text-foreground font-medium">9558295218, 9990107533</span>
             </p>
 
             <div className="mt-10">
