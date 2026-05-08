@@ -14,7 +14,7 @@ const AnnouncementBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.5 }}
-          className="relative z-30 container mx-auto px-4 lg:px-8 pt-6"
+          className="relative z-30 container mx-auto px-4 lg:px-8 pt-28 sm:pt-32"
           aria-label="Call for Book Chapters announcement"
         >
           <div className="relative glass-card rounded-2xl border border-primary/25 premium-shadow overflow-hidden">
