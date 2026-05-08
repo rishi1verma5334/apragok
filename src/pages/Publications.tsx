@@ -157,7 +157,7 @@ const Publications = () => {
                 </Button>
               </Link>
               <a
-                href="https://forms.gle/emyKcs5f8j9JBpgT9"
+                href="https://forms.gle/emvKcs5f8j9JBpgT9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
