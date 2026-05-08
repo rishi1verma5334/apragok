@@ -83,7 +83,7 @@ const HeroSection = () => {
   }, [currentSlide]);
 
   return (
-    <section id="home" className="min-h-[100svh] flex items-center justify-center relative overflow-hidden pt-24 sm:pt-28 pb-16">
+    <section id="home" className="min-h-[100svh] flex items-center justify-center relative overflow-hidden pt-8 sm:pt-10 pb-16">
       {/* Slideshow Background */}
       <div className="absolute inset-0 bg-background">
         <AnimatePresence mode="sync">
