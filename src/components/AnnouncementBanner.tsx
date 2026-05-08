@@ -41,7 +41,7 @@ const AnnouncementBanner = () => {
 
               <div className="flex items-center gap-2 shrink-0 self-stretch sm:self-auto">
                 <Link
-                  to="/call-for-chapters"
+                  to="/publications/call-for-chapters"
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:bg-primary/90 transition-all hover:-translate-y-0.5 premium-shadow"
                 >
                   View Details
