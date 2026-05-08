@@ -165,7 +165,7 @@ const benefits = [
   "Academic Visibility",
 ];
 
-const RESERVATION_FORM = "https://forms.gle/emyKcs5f8j9JBpgT9";
+const RESERVATION_FORM = "https://forms.gle/emvKcs5f8j9JBpgT9";
 
 const CallForChapters = () => {
   return (
