@@ -1,21 +1,42 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, MapPin, ArrowRight, Sparkles, CalendarOff } from "lucide-react";
 
-// Set to null when there is no upcoming event
-const upcomingEvent: {
+type UpcomingEvent = {
   title: string;
   date: string;
   location: string;
   href: string;
-} | null = {
-  title: "Spectrum of Knowledge Conference 2026",
-  date: "June 27, 2026",
-  location: "Online (Google Meet)",
-  href: "/workshops",
 };
 
+// Set to [] when there are no upcoming events
+const upcomingEvents: UpcomingEvent[] = [
+  {
+    title: "FDP Series 2 — AI Powered Education",
+    date: "June 20, 2026",
+    location: "Online (Google Meet)",
+    href: "/workshops/fdp-ai-education",
+  },
+  {
+    title: "Spectrum of Knowledge Conference 2026",
+    date: "June 27, 2026",
+    location: "Online (Google Meet)",
+    href: "/workshops",
+  },
+];
+
 const EventRibbon = () => {
-  if (!upcomingEvent) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (upcomingEvents.length <= 1) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % upcomingEvents.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (upcomingEvents.length === 0) {
     return (
       <div
         className="fixed top-0 left-0 right-0 z-[60] block bg-muted text-muted-foreground border-b border-border"
@@ -31,10 +52,13 @@ const EventRibbon = () => {
     );
   }
 
+  const upcomingEvent = upcomingEvents[index];
+
   return (
     <Link
       to={upcomingEvent.href}
-      className="fixed top-0 left-0 right-0 z-[60] block bg-gradient-to-r from-primary via-primary/90 to-primary text-primary-foreground shadow-md hover:shadow-lg transition-shadow group"
+      key={upcomingEvent.title}
+      className="fixed top-0 left-0 right-0 z-[60] block bg-gradient-to-r from-primary via-primary/90 to-primary text-primary-foreground shadow-md hover:shadow-lg transition-shadow group animate-in fade-in duration-500"
       aria-label="View upcoming event details"
     >
       <div className="container mx-auto px-3 sm:px-4 lg:px-8">
@@ -56,6 +80,18 @@ const EventRibbon = () => {
             <span className="hidden xs:inline">Details</span>
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
           </span>
+          {upcomingEvents.length > 1 && (
+            <span className="inline-flex items-center gap-1 ml-1 shrink-0" aria-hidden="true">
+              {upcomingEvents.map((_, i) => (
+                <span
+                  key={i}
+                  className={`h-1.5 w-1.5 rounded-full transition-opacity ${
+                    i === index ? "bg-primary-foreground" : "bg-primary-foreground/40"
+                  }`}
+                />
+              ))}
+            </span>
+          )}
         </div>
       </div>
     </Link>
