@@ -14,6 +14,7 @@ import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
 import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.jpg";
 import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
 import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
+import fdpAiEducationS2 from "@/assets/events/fdp-ai-education-s2.jpg";
 
 const features = [
   {
