@@ -200,7 +200,7 @@ const HeroSection = () => {
                 onClick={() => navigate('/workshops')}
               >
                 <Users className="mr-2" size={18} />
-                Join Workshops
+                Join Events
               </Button>
               <Link to="/gallery" className="w-full sm:w-auto">
                 <Button
