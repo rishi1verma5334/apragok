@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Publications from "./pages/Publications";
 import BookDetail from "./pages/BookDetail";
 import Workshops from "./pages/Workshops";
+import FdpAiEducation from "./pages/FdpAiEducation";
 import CallForChapters from "./pages/CallForChapters";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/publications/call-for-chapters" element={<CallForChapters />} />
           <Route path="/publications/:slug" element={<BookDetail />} />
           <Route path="/workshops" element={<Workshops />} />
+          <Route path="/workshops/fdp-ai-education" element={<FdpAiEducation />} />
           <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
