@@ -14,6 +14,7 @@ import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
 import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.jpg";
 import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
 import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
+import fdpAiEducationS2 from "@/assets/events/fdp-ai-education-s2.jpg";
 
 const features = [
   {
@@ -91,6 +92,78 @@ const Workshops = () => {
                 Get in Touch
               </a>
             </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Upcoming Event - FDP Series 2: AI Powered Education */}
+      <section className="py-16 bg-primary/5 border-y border-primary/20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <Badge className="mb-4 bg-primary text-primary-foreground">
+              <Calendar size={14} className="mr-1" />
+              Upcoming Event
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-3 sm:mb-4">
+              FDP Series 2 — AI Powered Education
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
+              Enhancing Student Engagement and Outcomes — Step Into the Future of Teaching
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
+              <span className="flex items-center gap-1">
+                <Calendar size={16} className="text-primary" />
+                June 20, 2026 · 11:00 AM – 5:30 PM
+              </span>
+              <span className="flex items-center gap-1">
+                <MapPin size={16} className="text-primary" />
+                Online
+              </span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            onClick={() => openLightbox(fdpAiEducationS2, "FDP Series 2 — AI Powered Education brochure")}
+            className="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow mb-8"
+          >
+            <img
+              src={fdpAiEducationS2}
+              alt="FDP Series 2 — AI Powered Education brochure"
+              className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center space-y-3"
+          >
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+              asChild
+            >
+              <a href="https://wa.me/message/PQ6G2FPVROSKH1" target="_blank" rel="noopener noreferrer">
+                Register Now
+              </a>
+            </Button>
+            <p className="text-sm text-muted-foreground">
+              Last date: 15th June 2026 · ₹350 (Inclusive of GST) · Limited seats — first 30 registrations get entry only
+            </p>
           </motion.div>
         </div>
       </section>
