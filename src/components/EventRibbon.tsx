@@ -9,8 +9,8 @@ const upcomingEvent: {
   href: string;
 } | null = {
   title: "Spectrum of Knowledge Conference 2026",
-  date: "May 23, 2026",
-  location: "National Prestige School, Ghaziabad",
+  date: "June 27, 2026",
+  location: "Online (Google Meet)",
   href: "/workshops",
 };
 
