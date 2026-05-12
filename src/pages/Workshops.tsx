@@ -118,11 +118,11 @@ const Workshops = () => {
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
               <span className="flex items-center gap-1">
                 <Calendar size={16} className="text-primary" />
-                May 23, 2026
+                June 27, 2026 · 10:30 AM – 5:30 PM
               </span>
               <span className="flex items-center gap-1">
                 <MapPin size={16} className="text-primary" />
-                National Prestige School, Ghaziabad
+                Online (Google Meet)
               </span>
             </div>
           </motion.div>
