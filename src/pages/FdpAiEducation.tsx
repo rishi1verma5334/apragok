@@ -107,26 +107,6 @@ const FdpAiEducation = () => {
         </div>
       </section>
 
-      {/* Brochure */}
-      <section className="py-12 sm:py-16">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-2xl overflow-hidden shadow-lg border border-border/50"
-          >
-            <img
-              src={fdpAiEducationS2}
-              alt="FDP Series 2 — AI Powered Education brochure"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </motion.div>
-        </div>
-      </section>
 
       {/* Event Details */}
       <section className="py-12 sm:py-16 bg-secondary/30">
