@@ -152,15 +152,27 @@ const Workshops = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center space-y-3"
           >
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
-              asChild
-            >
-              <a href="https://forms.gle/AusAqC4kQrdVzrMj9" target="_blank" rel="noopener noreferrer">
-                Register Now
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+                asChild
+              >
+                <a href="https://forms.gle/AusAqC4kQrdVzrMj9" target="_blank" rel="noopener noreferrer">
+                  Register Now
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+                asChild
+              >
+                <Link to="/workshops/fdp-ai-education">
+                  More Details
+                </Link>
+              </Button>
+            </div>
             <p className="text-sm text-muted-foreground">
               Last date: 15th June 2026 · ₹350 (Inclusive of GST) · Limited seats — first 30 registrations get entry only
             </p>
