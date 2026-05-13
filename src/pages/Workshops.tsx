@@ -157,7 +157,7 @@ const Workshops = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
               asChild
             >
-              <a href="https://wa.me/message/PQ6G2FPVROSKH1" target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.gle/AusAqC4kQrdVzrMj9" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
             </Button>
