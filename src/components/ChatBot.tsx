@@ -148,13 +148,40 @@ const ChatBot = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8, type: "spring", stiffness: 300 }}
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => {
+          dismissPopup();
+          setOpen((o) => !o);
+        }}
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-xl border-2 border-primary-foreground/20 flex items-center justify-center hover:bg-primary/90 transition-all duration-300 hover:scale-110"
         aria-label="Open APRA Assistant"
         whileTap={{ scale: 0.9 }}
       >
         {open ? <X size={22} /> : <MessageCircle size={22} />}
       </motion.button>
+
+      {/* Attention popup bubble */}
+      <AnimatePresence>
+        {showPopup && !open && (
+          <motion.div
+            initial={{ opacity: 0, x: 20, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 20, scale: 0.8 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="fixed bottom-24 right-4 sm:right-6 z-50 flex items-center"
+          >
+            <div className="relative bg-primary text-primary-foreground px-4 py-3 rounded-2xl rounded-br-none shadow-lg border border-primary-foreground/20 text-sm font-medium max-w-[14rem]">
+              <button
+                onClick={(e) => { e.stopPropagation(); dismissPopup(); }}
+                className="absolute -top-2 -right-2 h-5 w-5 bg-background rounded-full flex items-center justify-center border border-border shadow-sm text-muted-foreground hover:text-foreground"
+                aria-label="Dismiss"
+              >
+                <X size={10} />
+              </button>
+              <p>Hi! I'm your APRA Assistant. Ask me anything about the site!</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {open && (
