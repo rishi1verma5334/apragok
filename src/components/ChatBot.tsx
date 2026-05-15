@@ -37,6 +37,10 @@ const renderContent = (text: string) => {
 
 const ChatBot = () => {
   const [open, setOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupDismissed, setPopupDismissed] = useState(() => {
+    try { return localStorage.getItem("chatbot-popup-dismissed") === "1"; } catch { return false; }
+  });
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -47,6 +51,19 @@ const ChatBot = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!popupDismissed) {
+      const t = setTimeout(() => setShowPopup(true), 2500);
+      return () => clearTimeout(t);
+    }
+  }, [popupDismissed]);
+
+  const dismissPopup = () => {
+    setShowPopup(false);
+    setPopupDismissed(true);
+    try { localStorage.setItem("chatbot-popup-dismissed", "1"); } catch { /* noop */ }
+  };
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
