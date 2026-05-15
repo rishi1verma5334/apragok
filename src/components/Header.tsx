@@ -80,7 +80,7 @@ const Header = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
-              className="ml-2"
+              className="ml-2 flex items-center gap-2"
             >
               <Button 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-6 shadow-md hover:shadow-lg transition-all duration-300"
@@ -88,6 +88,7 @@ const Header = () => {
               >
                 Get in Touch
               </Button>
+              <DarkModeToggle />
             </motion.div>
           </nav>
 
