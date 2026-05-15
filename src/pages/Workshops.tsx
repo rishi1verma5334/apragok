@@ -276,7 +276,7 @@ const Workshops = () => {
               </Button>
             </div>
             <p className="text-sm text-muted-foreground">
-              🎉 Early Bird Discount: 20% off if you register before May 5, 2026!
+              🎉 Early Bird Discount: 20% off if you register before June 5, 2026!
             </p>
           </motion.div>
         </div>
