@@ -55,7 +55,7 @@ const EventRibbon = () => {
     );
   }
 
-  const upcomingEvent = upcomingEvents[index];
+  const upcomingEvent = upcomingEvents[index % upcomingEvents.length];
 
   return (
     <Link
