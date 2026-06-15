@@ -14,6 +14,8 @@ import workshop19 from "@/assets/gallery/workshop-19.jpeg";
 import workshop20 from "@/assets/gallery/workshop-20.jpeg";
 import workshop21 from "@/assets/gallery/workshop-21.jpeg";
 import workshop22 from "@/assets/gallery/workshop-22.jpeg";
+import book31 from "@/assets/gallery/book-3-1.jpeg";
+import book32 from "@/assets/gallery/book-3-2.jpeg";
 
 import workshop1Mobile from "@/assets/gallery/workshop-1-mobile.jpeg";
 import workshop2Mobile from "@/assets/gallery/workshop-2-mobile.jpeg";
@@ -31,6 +33,8 @@ const allImages: Slide[] = [
   { desktop: workshop20, mobile: workshop20 },
   { desktop: workshop21, mobile: workshop21 },
   { desktop: workshop22, mobile: workshop22 },
+  { desktop: book31, mobile: book31 },
+  { desktop: book32, mobile: book32 },
 ];
 const slideshowImages = [...allImages].sort(() => Math.random() - 0.5);
 
