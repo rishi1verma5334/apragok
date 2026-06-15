@@ -43,6 +43,11 @@ const Workshops = () => {
   const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
+  // Time-based content: events auto-hide once their date passes; discount auto-expires.
+  const showFdpUpcoming = !isPastDate("June 20, 2026");
+  const showSpectrumUpcoming = !isPastDate("June 27, 2026");
+  const showEarlyBird = isBeforeDate("June 5, 2026");
+
   const toggleEvent = (id: string) => {
     setExpandedEvent(prev => prev === id ? null : id);
   };
