@@ -21,8 +21,22 @@ import conferenceDay1 from "@/assets/gallery/conference-day1.jpeg";
 import conferenceDay2 from "@/assets/gallery/conference-day2.jpeg";
 import fdpPhoto1 from "@/assets/events/fdp-ai-education-photo1.jpeg";
 import fdpPhoto2 from "@/assets/events/fdp-ai-education-photo2.jpg";
+import book31 from "@/assets/gallery/book-3-1.jpeg";
+import book32 from "@/assets/gallery/book-3-2.jpeg";
 
 const galleryImages = [
+  {
+    id: 29,
+    title: "Book Handover - Future-Forward Research",
+    description: "Presenting our latest publications to contributing authors",
+    image: book31,
+  },
+  {
+    id: 30,
+    title: "Certificate Presentation Ceremony",
+    description: "Honoring editors of Future-Forward Research with certificates",
+    image: book32,
+  },
   {
     id: 27,
     title: "FDP: AI Powered Education - Session",
