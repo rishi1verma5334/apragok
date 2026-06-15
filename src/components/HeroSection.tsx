@@ -4,35 +4,17 @@ import { ArrowDown, BookOpen, Images, Users } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import apraLogo from "@/assets/apra-logo.jpeg";
-import workshop1 from "@/assets/gallery/workshop-1.jpeg";
-import workshop2 from "@/assets/gallery/workshop-2.jpeg";
-import workshop3 from "@/assets/gallery/workshop-3.jpeg";
 import workshop16 from "@/assets/gallery/workshop-16.jpeg";
 import workshop17 from "@/assets/gallery/workshop-17.jpeg";
 import workshop18 from "@/assets/gallery/workshop-18.jpeg";
-import workshop19 from "@/assets/gallery/workshop-19.jpeg";
-import workshop20 from "@/assets/gallery/workshop-20.jpeg";
-import workshop21 from "@/assets/gallery/workshop-21.jpeg";
-import workshop22 from "@/assets/gallery/workshop-22.jpeg";
 import book31 from "@/assets/gallery/book-3-1.jpeg";
 import book32 from "@/assets/gallery/book-3-2.jpeg";
 
-import workshop1Mobile from "@/assets/gallery/workshop-1-mobile.jpeg";
-import workshop2Mobile from "@/assets/gallery/workshop-2-mobile.jpeg";
-import workshop3Mobile from "@/assets/gallery/workshop-3-mobile.jpeg";
-
 type Slide = { desktop: string; mobile: string };
 const allImages: Slide[] = [
-  { desktop: workshop1, mobile: workshop1Mobile },
-  { desktop: workshop2, mobile: workshop2Mobile },
-  { desktop: workshop3, mobile: workshop3Mobile },
   { desktop: workshop16, mobile: workshop16 },
   { desktop: workshop17, mobile: workshop17 },
   { desktop: workshop18, mobile: workshop18 },
-  { desktop: workshop19, mobile: workshop19 },
-  { desktop: workshop20, mobile: workshop20 },
-  { desktop: workshop21, mobile: workshop21 },
-  { desktop: workshop22, mobile: workshop22 },
   { desktop: book31, mobile: book31 },
   { desktop: book32, mobile: book32 },
 ];
