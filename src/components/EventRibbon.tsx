@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, MapPin, ArrowRight, Sparkles, CalendarOff } from "lucide-react";
+import { isPastDate } from "@/lib/eventDates";
 
 type UpcomingEvent = {
   title: string;
@@ -9,8 +10,8 @@ type UpcomingEvent = {
   href: string;
 };
 
-// Set to [] when there are no upcoming events
-const upcomingEvents: UpcomingEvent[] = [
+// Set to [] when there are no upcoming events. Past events are filtered out automatically.
+const allUpcomingEvents: UpcomingEvent[] = [
   {
     title: "FDP Series 2 — AI Powered Education",
     date: "June 20, 2026",
