@@ -103,6 +103,7 @@ const Workshops = () => {
       </section>
 
       {/* Upcoming Event - FDP Series 2: AI Powered Education */}
+      {showFdpUpcoming && (
       <section className="py-16 bg-primary/5 border-y border-primary/20">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
