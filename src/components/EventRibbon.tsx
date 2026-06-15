@@ -28,6 +28,8 @@ const allUpcomingEvents: UpcomingEvent[] = [
 
 const EventRibbon = () => {
   const [index, setIndex] = useState(0);
+  // Auto-hide events whose date has already passed.
+  const upcomingEvents = allUpcomingEvents.filter((e) => !isPastDate(e.date));
 
   useEffect(() => {
     if (upcomingEvents.length <= 1) return;
