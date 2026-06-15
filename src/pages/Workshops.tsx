@@ -289,6 +289,8 @@ const Workshops = () => {
           </motion.div>
         </div>
       </section>
+      )}
+
 
 
       {/* Past Events Section */}
