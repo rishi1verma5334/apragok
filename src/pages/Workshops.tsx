@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
+import { isPastDate, isBeforeDate } from "@/lib/eventDates";
 import conferenceFlyer1 from "@/assets/events/conference-flyer-1.jpg";
 import conferenceFlyer2 from "@/assets/events/conference-flyer-2.jpg";
 import fdpAiEducationPage1 from "@/assets/events/fdp-ai-education-page1.jpg";
@@ -42,6 +43,11 @@ const features = [
 const Workshops = () => {
   const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
+  // Time-based content: events auto-hide once their date passes; discount auto-expires.
+  const showFdpUpcoming = !isPastDate("June 20, 2026");
+  const showSpectrumUpcoming = !isPastDate("June 27, 2026");
+  const showEarlyBird = isBeforeDate("June 5, 2026");
 
   const toggleEvent = (id: string) => {
     setExpandedEvent(prev => prev === id ? null : id);
@@ -97,6 +103,7 @@ const Workshops = () => {
       </section>
 
       {/* Upcoming Event - FDP Series 2: AI Powered Education */}
+      {showFdpUpcoming && (
       <section className="py-16 bg-primary/5 border-y border-primary/20">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -179,9 +186,12 @@ const Workshops = () => {
           </motion.div>
         </div>
       </section>
+      )}
 
       {/* Upcoming Event - Spectrum of Knowledge Conference 2026 */}
+      {showSpectrumUpcoming && (
       <section className="py-16 bg-primary/10 border-y-2 border-primary/20">
+
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -275,12 +285,16 @@ const Workshops = () => {
                 </a>
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground">
-              🎉 Early Bird Discount: 20% off if you register before June 5, 2026!
-            </p>
+            {showEarlyBird && (
+              <p className="text-sm text-muted-foreground">
+                🎉 Early Bird Discount: 20% off if you register before June 5, 2026!
+              </p>
+            )}
           </motion.div>
         </div>
       </section>
+      )}
+
 
 
       {/* Past Events Section */}
