@@ -185,6 +185,7 @@ const Workshops = () => {
           </motion.div>
         </div>
       </section>
+      )}
 
       {/* Upcoming Event - Spectrum of Knowledge Conference 2026 */}
       {showSpectrumUpcoming && (
