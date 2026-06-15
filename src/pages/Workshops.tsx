@@ -187,7 +187,9 @@ const Workshops = () => {
       </section>
 
       {/* Upcoming Event - Spectrum of Knowledge Conference 2026 */}
+      {showSpectrumUpcoming && (
       <section className="py-16 bg-primary/10 border-y-2 border-primary/20">
+
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
