@@ -319,6 +319,54 @@ const Workshops = () => {
             </p>
           </motion.div>
 
+          {/* Event 0: FDP Series 2 (auto-moves here once its date passes) */}
+          {!showFdpUpcoming && (
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("fdp-s2")}
+              className="w-full text-center group cursor-pointer"
+            >
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>FDP Series 2 — AI Powered Education</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "fdp-s2" ? "rotate-180" : ""}`} />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                June 20, 2026 · Online
+              </p>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "fdp-s2" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Enhancing Student Engagement and Outcomes — Step Into the Future of Teaching
+                    </p>
+                    <div
+                      onClick={() => openLightbox(fdpAiEducationS2, "FDP Series 2 — AI Powered Education brochure")}
+                      className="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                    >
+                      <img
+                        src={fdpAiEducationS2}
+                        alt="FDP Series 2 — AI Powered Education brochure"
+                        className="w-full h-auto"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          )}
+
           {/* Event 1: FDP AI Education */}
           <div className="max-w-5xl mx-auto mb-4">
             <button
