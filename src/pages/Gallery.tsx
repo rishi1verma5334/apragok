@@ -42,7 +42,7 @@ const galleryImages = [
   },
   {
     id: 36,
-    title: "FDP Series 2: AI Powered Education - Session",
+    title: "FDP Series 2: AI Powered Education - Resource Person",
     description: "Dr Priyanka Verma presenting on Why Student Engagement Matters",
     image: fdpS2Photo2,
   },
