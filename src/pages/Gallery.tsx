@@ -60,13 +60,13 @@ const galleryImages = [
   },
   {
     id: 39,
-    title: "FDP Series 2: AI Powered Education - Presentation",
+    title: "FDP Series 2: AI Powered Education - Speaker",
     description: "Himani Raizada during the AI Powered Education session",
     image: fdpS2Photo5,
   },
   {
     id: 40,
-    title: "FDP Series 2: AI Powered Education - Speaker",
+    title: "FDP Series 2: AI Powered Education - Co-Convenor",
     description: "Namita Jend presenting during the AI Powered Education session",
     image: fdpS2Photo6,
   },
@@ -78,13 +78,13 @@ const galleryImages = [
   },
   {
     id: 42,
-    title: "FDP Series 2: AI Powered Education - Participant",
+    title: "FDP Series 2: AI Powered Education",
     description: "Rishi Verma engaging in the AI Powered Education program",
     image: fdpS2Photo8,
   },
   {
     id: 43,
-    title: "FDP Series 2: AI Powered Education - Session in Progress",
+    title: "FDP Series 2: AI Powered Education - Convenor",
     description: "Dr. Keemti Gaur during the AI Powered Education session",
     image: fdpS2Photo9,
   },
