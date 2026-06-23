@@ -28,6 +28,10 @@ import fdpS2Photo2 from "@/assets/events/fdp-s2-photo2.jpeg";
 import fdpS2Photo3 from "@/assets/events/fdp-s2-photo3.jpeg";
 import fdpS2Photo4 from "@/assets/events/fdp-s2-photo4.jpeg";
 import fdpS2Photo5 from "@/assets/events/fdp-s2-photo5.jpeg";
+import fdpS2Photo6 from "@/assets/events/fdp-s2-photo6.jpeg";
+import fdpS2Photo7 from "@/assets/events/fdp-s2-photo7.jpeg";
+import fdpS2Photo8 from "@/assets/events/fdp-s2-photo8.jpeg";
+import fdpS2Photo9 from "@/assets/events/fdp-s2-photo9.jpeg";
 
 const galleryImages = [
   {
@@ -59,6 +63,30 @@ const galleryImages = [
     title: "FDP Series 2: AI Powered Education - Presentation",
     description: "Himani Raizada during the AI Powered Education session",
     image: fdpS2Photo5,
+  },
+  {
+    id: 40,
+    title: "FDP Series 2: AI Powered Education - Speaker",
+    description: "Namita Jend presenting during the AI Powered Education session",
+    image: fdpS2Photo6,
+  },
+  {
+    id: 41,
+    title: "FDP Series 2: AI Powered Education - Guest Address",
+    description: "Arya Ratna Dr. Sourabh Arya addressing the faculty participants",
+    image: fdpS2Photo7,
+  },
+  {
+    id: 42,
+    title: "FDP Series 2: AI Powered Education - Participant",
+    description: "Rishi Verma engaging in the AI Powered Education program",
+    image: fdpS2Photo8,
+  },
+  {
+    id: 43,
+    title: "FDP Series 2: AI Powered Education - Session in Progress",
+    description: "Dr. Keemti Gaur during the AI Powered Education session",
+    image: fdpS2Photo9,
   },
   {
     id: 29,
