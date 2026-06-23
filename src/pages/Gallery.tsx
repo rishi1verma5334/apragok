@@ -60,7 +60,7 @@ const galleryImages = [
   },
   {
     id: 39,
-    title: "FDP Series 2: AI Powered Education - Speaker",
+    title: "FDP Series 2: AI Powered Education - Resource Person",
     description: "Himani Raizada during the AI Powered Education session",
     image: fdpS2Photo5,
   },
