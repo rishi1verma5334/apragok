@@ -32,8 +32,50 @@ import fdpS2Photo6 from "@/assets/events/fdp-s2-photo6.jpeg";
 import fdpS2Photo7 from "@/assets/events/fdp-s2-photo7.jpeg";
 import fdpS2Photo8 from "@/assets/events/fdp-s2-photo8.jpeg";
 import fdpS2Photo9 from "@/assets/events/fdp-s2-photo9.jpeg";
+import spectrumConfPhoto1 from "@/assets/events/spectrum-conf-photo1.jpeg";
+import spectrumConfPhoto2 from "@/assets/events/spectrum-conf-photo2.png";
+import spectrumConfPhoto3 from "@/assets/events/spectrum-conf-photo3.jpeg";
+import spectrumConfPhoto4 from "@/assets/events/spectrum-conf-photo4.jpeg";
+import spectrumConfPhoto5 from "@/assets/events/spectrum-conf-photo5.jpeg";
+import spectrumConfPhoto6 from "@/assets/events/spectrum-conf-photo6.jpeg";
 
 const galleryImages = [
+  {
+    id: 44,
+    title: "Spectrum of Knowledge Conference 2026 - Keynote Session",
+    description: "Promoting Excellence in Multidisciplinary Research, organized by APRA Group of Knowledge (June 27, 2026)",
+    image: spectrumConfPhoto1,
+  },
+  {
+    id: 45,
+    title: "Spectrum of Knowledge Conference 2026 - Participants",
+    description: "Faculty, researchers and presenters during the multidisciplinary research conference",
+    image: spectrumConfPhoto2,
+  },
+  {
+    id: 46,
+    title: "Spectrum of Knowledge Conference 2026 - Research Presentation",
+    description: "Paper presentation on research methodology during the conference",
+    image: spectrumConfPhoto3,
+  },
+  {
+    id: 47,
+    title: "Spectrum of Knowledge Conference 2026 - Education in the AI Age",
+    description: "Presentation on reimagining education for sustainable human development",
+    image: spectrumConfPhoto4,
+  },
+  {
+    id: 48,
+    title: "Spectrum of Knowledge Conference 2026 - Introduction Session",
+    description: "Discussion on AI, emotional intelligence and human-centered education",
+    image: spectrumConfPhoto5,
+  },
+  {
+    id: 49,
+    title: "Spectrum of Knowledge Conference 2026 - Ethical Challenges in AI",
+    description: "Findings on ethical challenges in AI adoption presented at the conference",
+    image: spectrumConfPhoto6,
+  },
   {
     id: 35,
     title: "FDP Series 2: AI Powered Education - Participants",
