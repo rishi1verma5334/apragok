@@ -41,6 +41,42 @@ import spectrumConfPhoto6 from "@/assets/events/spectrum-conf-photo6.jpeg";
 
 const galleryImages = [
   {
+    id: 44,
+    title: "Spectrum of Knowledge Conference 2026 - Keynote Session",
+    description: "Promoting Excellence in Multidisciplinary Research, organized by APRA Group of Knowledge (June 27, 2026)",
+    image: spectrumConfPhoto1,
+  },
+  {
+    id: 45,
+    title: "Spectrum of Knowledge Conference 2026 - Participants",
+    description: "Faculty, researchers and presenters during the multidisciplinary research conference",
+    image: spectrumConfPhoto2,
+  },
+  {
+    id: 46,
+    title: "Spectrum of Knowledge Conference 2026 - Research Presentation",
+    description: "Paper presentation on research methodology during the conference",
+    image: spectrumConfPhoto3,
+  },
+  {
+    id: 47,
+    title: "Spectrum of Knowledge Conference 2026 - Education in the AI Age",
+    description: "Presentation on reimagining education for sustainable human development",
+    image: spectrumConfPhoto4,
+  },
+  {
+    id: 48,
+    title: "Spectrum of Knowledge Conference 2026 - Introduction Session",
+    description: "Discussion on AI, emotional intelligence and human-centered education",
+    image: spectrumConfPhoto5,
+  },
+  {
+    id: 49,
+    title: "Spectrum of Knowledge Conference 2026 - Ethical Challenges in AI",
+    description: "Findings on ethical challenges in AI adoption presented at the conference",
+    image: spectrumConfPhoto6,
+  },
+  {
     id: 35,
     title: "FDP Series 2: AI Powered Education - Participants",
     description: "Faculty Development Program Series 2 on Enhancing Student Engagement and Outcomes",
