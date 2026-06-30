@@ -146,9 +146,9 @@ const contentRequirements = [
 ];
 
 const importantDates = [
-  { label: "Last Date for Chapter Reservation", value: "15 June 2026" },
-  { label: "Final Date for Chapter Submission", value: "15 July 2026" },
-  { label: "Expected Date of Publication", value: "15 September 2026" },
+  { label: "Last Date for Chapter Reservation", value: "30 July 2026" },
+  { label: "Final Date for Chapter Submission", value: "20 August 2026" },
+  { label: "Expected Date of Publication", value: "30 September 2026" },
 ];
 
 const pricing = [
