@@ -66,7 +66,7 @@ const galleryImages = [
   },
   {
     id: 48,
-    title: "Spectrum of Knowledge Conference 2026 - Introduction Session",
+    title: "Spectrum of Knowledge Conference 2026",
     description: "Discussion on AI, emotional intelligence and human-centered education",
     image: spectrumConfPhoto5,
   },
