@@ -42,7 +42,7 @@ import spectrumConfPhoto6 from "@/assets/events/spectrum-conf-photo6.jpeg";
 const galleryImages = [
   {
     id: 44,
-    title: "Spectrum of Knowledge Conference 2026 - Keynote Session",
+    title: "Spectrum of Knowledge Conference 2026 - Keynote Speaker and Evaluator",
     description: "Promoting Excellence in Multidisciplinary Research, organized by APRA Group of Knowledge (June 27, 2026)",
     image: spectrumConfPhoto1,
   },
