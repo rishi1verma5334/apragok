@@ -12,6 +12,7 @@ import BookDetail from "./pages/BookDetail";
 import Workshops from "./pages/Workshops";
 import FdpAiEducation from "./pages/FdpAiEducation";
 import CallForChapters from "./pages/CallForChapters";
+import CallForEditors from "./pages/CallForEditors";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/publications/call-for-chapters" element={<CallForChapters />} />
+          <Route path="/publications/call-for-editors" element={<CallForEditors />} />
           <Route path="/publications/:slug" element={<BookDetail />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/workshops/fdp-ai-education" element={<FdpAiEducation />} />
