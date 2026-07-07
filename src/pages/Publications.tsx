@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BookOpen, Clock, FileEdit, GraduationCap, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Award, BookOpen, CheckCircle2, FileEdit, GraduationCap, Sparkles, Star, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -173,6 +173,75 @@ const Publications = () => {
             <p className="text-xs text-muted-foreground mt-4 text-center">
               Click above to view full chapter list, guidelines, and submission details
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Call for Editors Section */}
+      <section className="py-16 bg-gradient-to-br from-secondary/30 via-background to-secondary/30 border-y border-border/50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
+                <Star size={16} className="text-primary" />
+                <span className="text-sm font-medium text-primary">Call for Editors</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+                Join the Editorial Board of{" "}
+                <span className="text-primary">Spectrum of Knowledge 2026</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                A prestigious quarterly compendium with ISBN publication. Limited editorial positions available.
+              </p>
+            </div>
+
+            <div className="bg-card rounded-2xl p-6 sm:p-8 border border-border/50 shadow-lg mb-8">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  "Official E-Certificate of Editorial Board Membership",
+                  "Complimentary hard copy of the ISBN book",
+                  "National & international academic recognition",
+                  "Collaborate with eminent researchers & academicians",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Award size={20} className="text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center flex flex-col sm:flex-row gap-3 justify-center">
+              <Link to="/publications/call-for-editors">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg"
+                >
+                  <Users className="mr-2" size={20} />
+                  View Full Details
+                </Button>
+              </Link>
+              <a
+                href="https://forms.gle/AREcoNV6rbX41PFL8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full px-8"
+                >
+                  <Sparkles className="mr-2" size={20} />
+                  Apply as Editor
+                </Button>
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
