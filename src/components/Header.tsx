@@ -11,7 +11,7 @@ const navLinks = [
   { name: "About", section: "about" },
   { name: "Services", section: "services" },
   { name: "Publications", section: "publications", isPage: true, path: "/publications" },
-  { name: "Workshops", section: "workshops", isPage: true, path: "/workshops" },
+  { name: "Events", section: "workshops", isPage: true, path: "/workshops" },
   { name: "Contact", section: "contact" },
 ];
 
