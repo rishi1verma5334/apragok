@@ -66,7 +66,7 @@ This is a company website. For any changes or suggestions, please contact the de
 ## 👤 Author
 
 **Rishi Verma**
-B.Tech CSE | Developer
+Undergrad | Developer
 [GitHub](https://github.com/rishi1verma5334)
 
 ---
