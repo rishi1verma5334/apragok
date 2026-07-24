@@ -295,6 +295,58 @@ const Workshops = () => {
       </section>
       )}
 
+      {/* Upcoming Event - The Art of Balancing Life */}
+      {!isPastDate("August 8, 2026") && (
+        <section className="py-16 bg-secondary/30 border-y border-border/50">
+          <div className="container mx-auto px-4 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <Badge className="mb-4 bg-primary text-primary-foreground">
+                <Calendar size={14} className="mr-1" />
+                Upcoming Event · FREE
+              </Badge>
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-3">
+                The Art of Balancing Life — From Comfort to Harmony
+              </h2>
+              <p className="text-muted-foreground italic mb-4">
+                जीवन को संतुलित करने की कला
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mb-6">
+                <span className="flex items-center gap-1">
+                  <Calendar size={16} className="text-primary" />
+                  08 August 2026 · 10:30 AM – 1:30 PM
+                </span>
+                <span className="flex items-center gap-1">
+                  <MapPin size={16} className="text-primary" />
+                  Online (Google Meet)
+                </span>
+              </div>
+              <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+                Free online seminar by <span className="font-semibold text-foreground">Dr. N. K. Sharma</span> on
+                mindfulness, stress management, and work–life balance. FREE E-Certificate for every participant.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-3">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" asChild>
+                  <a href="https://forms.gle/NdD6NocoECVtvJey5" target="_blank" rel="noopener noreferrer">
+                    Register FREE Now
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8" asChild>
+                  <Link to="/workshops/balancing-life">View Details</Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+
+
 
 
       {/* Past Events Section */}
