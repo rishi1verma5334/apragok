@@ -11,6 +11,7 @@ import Publications from "./pages/Publications";
 import BookDetail from "./pages/BookDetail";
 import Workshops from "./pages/Workshops";
 import FdpAiEducation from "./pages/FdpAiEducation";
+import BalancingLife from "./pages/BalancingLife";
 import CallForChapters from "./pages/CallForChapters";
 import CallForEditors from "./pages/CallForEditors";
 import Gallery from "./pages/Gallery";
