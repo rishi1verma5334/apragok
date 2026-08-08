@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Images } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
@@ -39,209 +40,281 @@ import spectrumConfPhoto4 from "@/assets/events/spectrum-conf-photo4.jpeg";
 import spectrumConfPhoto5 from "@/assets/events/spectrum-conf-photo5.jpeg";
 import spectrumConfPhoto6 from "@/assets/events/spectrum-conf-photo6.jpeg";
 
-const galleryImages = [
+type GalleryImage = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+};
+
+type GalleryAlbum = {
+  id: string;
+  label: string;
+  title: string;
+  meta: string;
+  images: GalleryImage[];
+};
+
+const albums: GalleryAlbum[] = [
   {
-    id: 44,
-    title: "Spectrum of Knowledge Conference 2026 - Keynote Speaker and Evaluator",
-    description: "Promoting Excellence in Multidisciplinary Research, organized by APRA Group of Knowledge (June 27, 2026)",
-    image: spectrumConfPhoto1,
-  },
-  {
-    id: 45,
-    title: "Spectrum of Knowledge Conference 2026 - Participants",
-    description: "Faculty, researchers and presenters during the multidisciplinary research conference",
-    image: spectrumConfPhoto2,
-  },
-  {
-    id: 46,
-    title: "Spectrum of Knowledge Conference 2026 - Research Presentation",
-    description: "Paper presentation on research methodology during the conference",
-    image: spectrumConfPhoto3,
-  },
-  {
-    id: 47,
-    title: "Spectrum of Knowledge Conference 2026 - Education in the AI Age",
-    description: "Presentation on reimagining education for sustainable human development",
-    image: spectrumConfPhoto4,
-  },
-  {
-    id: 48,
+    id: "spectrum-2026",
+    label: "Spectrum of Knowledge 2026",
     title: "Spectrum of Knowledge Conference 2026",
-    description: "Discussion on AI, emotional intelligence and human-centered education",
-    image: spectrumConfPhoto5,
+    meta: "Promoting Excellence in Multidisciplinary Research · June 27, 2026 · Online",
+    images: [
+      {
+        id: 44,
+        title: "Spectrum of Knowledge Conference 2026 - Keynote Speaker and Evaluator",
+        description:
+          "Promoting Excellence in Multidisciplinary Research, organized by APRA Group of Knowledge (June 27, 2026)",
+        image: spectrumConfPhoto1,
+      },
+      {
+        id: 45,
+        title: "Spectrum of Knowledge Conference 2026 - Participants",
+        description: "Faculty, researchers and presenters during the multidisciplinary research conference",
+        image: spectrumConfPhoto2,
+      },
+      {
+        id: 46,
+        title: "Spectrum of Knowledge Conference 2026 - Research Presentation",
+        description: "Paper presentation on research methodology during the conference",
+        image: spectrumConfPhoto3,
+      },
+      {
+        id: 47,
+        title: "Spectrum of Knowledge Conference 2026 - Education in the AI Age",
+        description: "Presentation on reimagining education for sustainable human development",
+        image: spectrumConfPhoto4,
+      },
+      {
+        id: 48,
+        title: "Spectrum of Knowledge Conference 2026",
+        description: "Discussion on AI, emotional intelligence and human-centered education",
+        image: spectrumConfPhoto5,
+      },
+      {
+        id: 49,
+        title: "Spectrum of Knowledge Conference 2026 - Ethical Challenges in AI",
+        description: "Findings on ethical challenges in AI adoption presented at the conference",
+        image: spectrumConfPhoto6,
+      },
+    ],
   },
   {
-    id: 49,
-    title: "Spectrum of Knowledge Conference 2026 - Ethical Challenges in AI",
-    description: "Findings on ethical challenges in AI adoption presented at the conference",
-    image: spectrumConfPhoto6,
-  },
-  {
-    id: 35,
-    title: "FDP Series 2: AI Powered Education - Participants",
-    description: "Faculty Development Program Series 2 on Enhancing Student Engagement and Outcomes",
-    image: fdpS2Photo1,
-  },
-  {
-    id: 36,
-    title: "FDP Series 2: AI Powered Education - Resource Person",
-    description: "Dr Priyanka Verma presenting on Why Student Engagement Matters",
-    image: fdpS2Photo2,
-  },
-  {
-    id: 37,
-    title: "FDP Series 2: AI Powered Education - Attendees",
-    description: "Engaged faculty participants during the AI Powered Education program",
-    image: fdpS2Photo3,
-  },
-  {
-    id: 38,
-    title: "FDP Series 2: AI Powered Education - Live Demo",
-    description: "Hands-on demonstration of AI tools for educators",
-    image: fdpS2Photo4,
-  },
-  {
-    id: 39,
-    title: "FDP Series 2: AI Powered Education - Resource Person",
-    description: "Himani Raizada during the AI Powered Education session",
-    image: fdpS2Photo5,
-  },
-  {
-    id: 40,
-    title: "FDP Series 2: AI Powered Education - Co-Convenor",
-    description: "Namita Jend presenting during the AI Powered Education session",
-    image: fdpS2Photo6,
-  },
-  {
-    id: 41,
-    title: "FDP Series 2: AI Powered Education - Guest Address",
-    description: "Arya Ratna Dr. Sourabh Arya addressing the faculty participants",
-    image: fdpS2Photo7,
-  },
-  {
-    id: 42,
+    id: "fdp-series-2",
+    label: "FDP Series 2",
     title: "FDP Series 2: AI Powered Education",
-    description: "Rishi Verma engaging in the AI Powered Education program",
-    image: fdpS2Photo8,
+    meta: "Enhancing Student Engagement and Outcomes · Faculty Development Program",
+    images: [
+      {
+        id: 35,
+        title: "FDP Series 2: AI Powered Education - Participants",
+        description: "Faculty Development Program Series 2 on Enhancing Student Engagement and Outcomes",
+        image: fdpS2Photo1,
+      },
+      {
+        id: 36,
+        title: "FDP Series 2: AI Powered Education - Resource Person",
+        description: "Dr Priyanka Verma presenting on Why Student Engagement Matters",
+        image: fdpS2Photo2,
+      },
+      {
+        id: 37,
+        title: "FDP Series 2: AI Powered Education - Attendees",
+        description: "Engaged faculty participants during the AI Powered Education program",
+        image: fdpS2Photo3,
+      },
+      {
+        id: 38,
+        title: "FDP Series 2: AI Powered Education - Live Demo",
+        description: "Hands-on demonstration of AI tools for educators",
+        image: fdpS2Photo4,
+      },
+      {
+        id: 39,
+        title: "FDP Series 2: AI Powered Education - Resource Person",
+        description: "Himani Raizada during the AI Powered Education session",
+        image: fdpS2Photo5,
+      },
+      {
+        id: 40,
+        title: "FDP Series 2: AI Powered Education - Co-Convenor",
+        description: "Namita Jend presenting during the AI Powered Education session",
+        image: fdpS2Photo6,
+      },
+      {
+        id: 41,
+        title: "FDP Series 2: AI Powered Education - Guest Address",
+        description: "Arya Ratna Dr. Sourabh Arya addressing the faculty participants",
+        image: fdpS2Photo7,
+      },
+      {
+        id: 42,
+        title: "FDP Series 2: AI Powered Education",
+        description: "Rishi Verma engaging in the AI Powered Education program",
+        image: fdpS2Photo8,
+      },
+      {
+        id: 43,
+        title: "FDP Series 2: AI Powered Education - Convenor",
+        description: "Dr. Keemti Gaur during the AI Powered Education session",
+        image: fdpS2Photo9,
+      },
+    ],
   },
   {
-    id: 43,
-    title: "FDP Series 2: AI Powered Education - Convenor",
-    description: "Dr. Keemti Gaur during the AI Powered Education session",
-    image: fdpS2Photo9,
+    id: "book-launches",
+    label: "Book Launches",
+    title: "Book Launches & Author Felicitation",
+    meta: "Publication handovers, certificates and launch celebrations",
+    images: [
+      {
+        id: 29,
+        title: "Book Handover - Future-Forward Research",
+        description: "Presenting our latest publications to contributing authors",
+        image: book31,
+      },
+      {
+        id: 30,
+        title: "Certificate Presentation Ceremony",
+        description: "Honoring editors of Future-Forward Research with certificates",
+        image: book32,
+      },
+      {
+        id: 2,
+        title: "Book Launch Event",
+        description: "Celebrating new publications with distinguished guests",
+        image: workshop2,
+      },
+    ],
   },
   {
-    id: 29,
-    title: "Book Handover - Future-Forward Research",
-    description: "Presenting our latest publications to contributing authors",
-    image: book31,
+    id: "fdp-ai-education",
+    label: "FDP: AI Powered Education",
+    title: "FDP: AI Powered Education",
+    meta: "The AI-Enabled Educator · April 4, 2026",
+    images: [
+      {
+        id: 27,
+        title: "FDP: AI Powered Education - Session",
+        description: "Faculty Development Program on AI in Education (April 4, 2026)",
+        image: fdpPhoto1,
+      },
+      {
+        id: 28,
+        title: "FDP: AI Powered Education - Highlights",
+        description: "Moments from the AI-Enabled Educator program (April 4, 2026)",
+        image: fdpPhoto2,
+      },
+    ],
   },
   {
-    id: 30,
-    title: "Certificate Presentation Ceremony",
-    description: "Honoring editors of Future-Forward Research with certificates",
-    image: book32,
+    id: "future-forward-conference",
+    label: "Future Forward Conference",
+    title: "Future Forward Research Conference",
+    meta: "Two Day Conference on Global Trends and Interdisciplinary Education",
+    images: [
+      {
+        id: 25,
+        title: "Future Forward Research Conference - Day 1",
+        description: "Two Day Conference on Global Trends and Interdisciplinary Education",
+        image: conferenceDay1,
+      },
+      {
+        id: 26,
+        title: "Future Forward Research Conference - Day 2",
+        description: "Two Day Conference on Global Trends and Interdisciplinary Education",
+        image: conferenceDay2,
+      },
+    ],
   },
   {
-    id: 27,
-    title: "FDP: AI Powered Education - Session",
-    description: "Faculty Development Program on AI in Education (April 4, 2026)",
-    image: fdpPhoto1,
-  },
-  {
-    id: 28,
-    title: "FDP: AI Powered Education - Highlights",
-    description: "Moments from the AI-Enabled Educator program (April 4, 2026)",
-    image: fdpPhoto2,
-  },
-  {
-    id: 25,
-    title: "Future Forward Research Conference - Day 1",
-    description: "Two Day Conference on Global Trends and Interdisciplinary Education",
-    image: conferenceDay1,
-  },
-  {
-    id: 26,
-    title: "Future Forward Research Conference - Day 2",
-    description: "Two Day Conference on Global Trends and Interdisciplinary Education",
-    image: conferenceDay2,
-  },
-  {
-    id: 1,
-    title: "Certificate Distribution Ceremony",
-    description: "Recognizing achievements of our participants",
-    image: workshop1,
-  },
-  {
-    id: 2,
-    title: "Book Launch Event",
-    description: "Celebrating new publications with distinguished guests",
-    image: workshop2,
-  },
-  {
-    id: 3,
-    title: "Workshop Training Session",
-    description: "Interactive learning with educators and professionals",
-    image: workshop3,
-  },
-  {
-    id: 16,
-    title: "Faculty Development Workshop",
-    description: "Training session with educators at library",
-    image: workshop16,
-  },
-  {
-    id: 17,
-    title: "Interactive Teaching Session",
-    description: "Engaging participants in active learning",
-    image: workshop17,
-  },
-  {
-    id: 18,
-    title: "NEP 2020 Presentation",
-    description: "Discussing National Education Policy implementation",
-    image: workshop18,
-  },
-  {
-    id: 19,
-    title: "School Workshop Session",
-    description: "Interactive session with students and teachers",
-    image: workshop19,
-  },
-  {
-    id: 20,
-    title: "Award Ceremony",
-    description: "Recognizing excellence in education",
-    image: workshop20,
-  },
-  {
-    id: 21,
-    title: "School Assembly Address",
-    description: "Inspiring students during morning assembly",
-    image: workshop21,
-  },
-  {
-    id: 22,
-    title: "Primary School Event",
-    description: "Engaging young minds in educational activities",
-    image: workshop22,
+    id: "workshops-training",
+    label: "Workshops & Training",
+    title: "Workshops & Training Sessions",
+    meta: "Faculty development, NEP 2020 sessions and school outreach",
+    images: [
+      {
+        id: 1,
+        title: "Certificate Distribution Ceremony",
+        description: "Recognizing achievements of our participants",
+        image: workshop1,
+      },
+      {
+        id: 3,
+        title: "Workshop Training Session",
+        description: "Interactive learning with educators and professionals",
+        image: workshop3,
+      },
+      {
+        id: 16,
+        title: "Faculty Development Workshop",
+        description: "Training session with educators at library",
+        image: workshop16,
+      },
+      {
+        id: 17,
+        title: "Interactive Teaching Session",
+        description: "Engaging participants in active learning",
+        image: workshop17,
+      },
+      {
+        id: 18,
+        title: "NEP 2020 Presentation",
+        description: "Discussing National Education Policy implementation",
+        image: workshop18,
+      },
+      {
+        id: 19,
+        title: "School Workshop Session",
+        description: "Interactive session with students and teachers",
+        image: workshop19,
+      },
+      {
+        id: 20,
+        title: "Award Ceremony",
+        description: "Recognizing excellence in education",
+        image: workshop20,
+      },
+      {
+        id: 21,
+        title: "School Assembly Address",
+        description: "Inspiring students during morning assembly",
+        image: workshop21,
+      },
+      {
+        id: 22,
+        title: "Primary School Event",
+        description: "Engaging young minds in educational activities",
+        image: workshop22,
+      },
+    ],
   },
 ];
 
 const Gallery = () => {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [activeAlbum, setActiveAlbum] = useState<string>("all");
+
+  const visibleAlbums = useMemo(
+    () => (activeAlbum === "all" ? albums : albums.filter((a) => a.id === activeAlbum)),
+    [activeAlbum]
+  );
+
+  const totalPhotos = albums.reduce((sum, a) => sum + a.images.length, 0);
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
+      <section className="pt-28 sm:pt-32 pb-10 sm:pb-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -251,67 +324,101 @@ const Gallery = () => {
           >
             <Badge variant="secondary" className="mb-4">
               <Images size={14} className="mr-1" />
-              Photo Gallery
+              Photo Gallery · {totalPhotos} photos
             </Badge>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-5 sm:mb-6 leading-tight">
               <span className="text-foreground">Moments from Our </span>
-              <span className="text-primary">Workshops</span>
+              <span className="text-primary">Events</span>
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Relive the memorable experiences from our past workshops, training sessions, 
-              and collaborative events that have empowered countless individuals.
+              Browse our conferences, faculty development programs, book launches and workshops —
+              organised event by event.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="pb-16 pt-4 sm:pt-8">
+      {/* Filter Tabs */}
+      <section className="sticky top-16 sm:top-20 z-30 bg-background/85 backdrop-blur-md border-y border-border/60">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {galleryImages.map((image, index) => (
-              <motion.div
-                key={image.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                onClick={() => setLightbox({ src: image.image, alt: image.title })}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setLightbox({ src: image.image, alt: image.title });
-                  }
-                }}
-                className="group relative overflow-hidden rounded-xl bg-secondary/30 aspect-[4/3] cursor-zoom-in"
-              >
-                {/* Gallery Image */}
-                <img 
-                  src={image.image} 
-                  alt={image.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-background">
-                    <h3 className="font-serif font-semibold text-lg">{image.title}</h3>
-                    <p className="text-sm opacity-80">{image.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="flex gap-2 overflow-x-auto py-3 scrollbar-none">
+            {[{ id: "all", label: `All (${totalPhotos})` }, ...albums.map((a) => ({ id: a.id, label: `${a.label} (${a.images.length})` }))].map(
+              (tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveAlbum(tab.id)}
+                  className={cn(
+                    "whitespace-nowrap rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                    activeAlbum === tab.id
+                      ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                      : "bg-secondary/40 text-muted-foreground border-border hover:text-foreground hover:bg-secondary"
+                  )}
+                >
+                  {tab.label}
+                </button>
+              )
+            )}
           </div>
-          
-          {/* Coming Soon Note */}
+        </div>
+      </section>
+
+      {/* Albums */}
+      <section className="py-10 sm:py-14">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+          {visibleAlbums.map((album) => (
+            <div key={album.id} id={album.id} className="scroll-mt-32">
+              <div className="mb-5 sm:mb-6 flex flex-col gap-1 border-l-4 border-primary pl-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-foreground">
+                  {album.title}
+                </h2>
+                <p className="text-sm text-muted-foreground">{album.meta}</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {album.images.map((image, index) => (
+                  <motion.div
+                    key={image.id}
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.4, delay: Math.min(index, 5) * 0.05 }}
+                    onClick={() => setLightbox({ src: image.image, alt: image.title })}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setLightbox({ src: image.image, alt: image.title });
+                      }
+                    }}
+                    className="group relative overflow-hidden rounded-xl bg-secondary/30 aspect-[4/3] cursor-zoom-in ring-1 ring-border/50 hover:ring-primary/40 transition-shadow hover:shadow-lg"
+                  >
+                    <img
+                      src={image.image}
+                      alt={image.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-background">
+                        <h3 className="font-serif font-semibold text-lg">{image.title}</h3>
+                        <p className="text-sm opacity-80">{image.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mt-12"
+            className="text-center pt-2"
           >
             <p className="text-muted-foreground">
               More photos coming soon. Stay tuned for updates from our upcoming events!
