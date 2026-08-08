@@ -295,8 +295,8 @@ const Workshops = () => {
       </section>
       )}
 
-      {/* Upcoming Event - The Art of Balancing Life */}
-      {!isPastDate("August 8, 2026") && (
+      {/* Upcoming Event - The Art of Balancing Life (concluded, now listed under Past Events) */}
+      {false && (
         <section className="py-16 bg-secondary/30 border-y border-border/50">
           <div className="container mx-auto px-4 lg:px-8">
             <motion.div
