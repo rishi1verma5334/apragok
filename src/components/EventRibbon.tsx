@@ -24,12 +24,6 @@ const allUpcomingEvents: UpcomingEvent[] = [
     location: "Online (Google Meet)",
     href: "/workshops",
   },
-  {
-    title: "The Art of Balancing Life — FREE Seminar",
-    date: "August 7, 2026",
-    location: "Online (Google Meet)",
-    href: "/workshops/balancing-life",
-  },
 ];
 
 const EventRibbon = () => {
