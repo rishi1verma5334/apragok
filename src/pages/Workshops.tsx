@@ -371,6 +371,44 @@ const Workshops = () => {
             </p>
           </motion.div>
 
+          {/* Event -1: The Art of Balancing Life (concluded) */}
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("balancing-life")}
+              className="w-full text-center group cursor-pointer"
+            >
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>The Art of Balancing Life — From Comfort to Harmony</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "balancing-life" ? "rotate-180" : ""}`} />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                August 8, 2026 · Online (Google Meet)
+              </p>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "balancing-life" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Free online seminar by Dr. N. K. Sharma on mindfulness, stress management, and
+                      work–life balance · FREE E-Certificate for every participant.
+                    </p>
+                    <Button variant="outline" className="rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+                      <Link to="/workshops/balancing-life">View Event Details</Link>
+                    </Button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Event 0: FDP Series 2 (auto-moves here once its date passes) */}
           {!showFdpUpcoming && (
           <div className="max-w-5xl mx-auto mb-4">
