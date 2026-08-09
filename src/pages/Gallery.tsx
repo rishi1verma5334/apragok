@@ -75,7 +75,7 @@ const albums: GalleryAlbum[] = [
       {
         id: 52,
         title: "The Art of Balancing Life - Dr Priyanka Verma",
-        description: "Speaker Dr. Priyanka Verma presenting at the seminar",
+        description: "Welcome address by CEO, APRA: Group of Knowledge",
         image: balancingLife3,
       },
       {
