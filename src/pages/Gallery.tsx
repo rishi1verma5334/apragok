@@ -47,6 +47,8 @@ import balancingLife5 from "@/assets/events/balancing-life-photo5.jpeg";
 import balancingLife6 from "@/assets/events/balancing-life-photo6.jpeg";
 import balancingLife7 from "@/assets/events/balancing-life-photo7.jpeg";
 import balancingLife8 from "@/assets/events/balancing-life-photo8.jpeg";
+import balancingLife9 from "@/assets/events/balancing-life-photo9.jpeg";
+import balancingLife10 from "@/assets/events/balancing-life-photo10.jpeg";
 
 type GalleryImage = {
   id: number;
@@ -118,8 +120,21 @@ const albums: GalleryAlbum[] = [
         description: "Presentation on transformation and holistic development (समग्र विकास)",
         image: balancingLife8,
       },
+      {
+        id: 58,
+        title: "The Art of Balancing Life - Online Participants",
+        description: "Resource persons and participants joining the national online seminar",
+        image: balancingLife9,
+      },
+      {
+        id: 59,
+        title: "The Art of Balancing Life - Session Presentation",
+        description: "Presentation shared with participants during the seminar",
+        image: balancingLife10,
+      },
     ],
   },
+
   {
     id: "spectrum-2026",
     label: "Spectrum of Knowledge 2026",
