@@ -75,7 +75,7 @@ const albums: GalleryAlbum[] = [
       {
         id: 52,
         title: "The Art of Balancing Life - Dr Priyanka Verma",
-        description: "Session on balancing mind, body, work, family and soul",
+        description: "\n",
         image: balancingLife3,
       },
       {
