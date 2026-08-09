@@ -120,8 +120,21 @@ const albums: GalleryAlbum[] = [
         description: "Presentation on transformation and holistic development (समग्र विकास)",
         image: balancingLife8,
       },
+      {
+        id: 58,
+        title: "The Art of Balancing Life - Online Participants",
+        description: "Resource persons and participants joining the national online seminar",
+        image: balancingLife9,
+      },
+      {
+        id: 59,
+        title: "The Art of Balancing Life - Session Presentation",
+        description: "Presentation shared with participants during the seminar",
+        image: balancingLife10,
+      },
     ],
   },
+
   {
     id: "spectrum-2026",
     label: "Spectrum of Knowledge 2026",
