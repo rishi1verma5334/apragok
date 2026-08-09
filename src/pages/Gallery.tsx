@@ -65,6 +65,62 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "balancing-life-2026",
+    label: "The Art of Balancing Life",
+    title: "National Online Seminar: The Art of Balancing Life",
+    meta: "From Comfort to Harmony · August 8, 2026 · Online",
+    images: [
+      {
+        id: 50,
+        title: "The Art of Balancing Life - Seminar Session",
+        description: "Himani Raizada addressing participants during the national online seminar (August 8, 2026)",
+        image: balancingLife1,
+      },
+      {
+        id: 51,
+        title: "The Art of Balancing Life - Speakers & Participants",
+        description: "Resource persons and faculty participants during the seminar",
+        image: balancingLife2,
+      },
+      {
+        id: 52,
+        title: "The Art of Balancing Life - Dr Priyanka Verma",
+        description: "Session on balancing mind, body, work, family and soul",
+        image: balancingLife3,
+      },
+      {
+        id: 53,
+        title: "The Art of Balancing Life - Dr. Keemti Gaur",
+        description: "Discussing principles for creating lasting balance in life",
+        image: balancingLife4,
+      },
+      {
+        id: 54,
+        title: "The Art of Balancing Life - Yog Rishi Ashram",
+        description: "Guest speaker sharing insights on harmony and well-being",
+        image: balancingLife5,
+      },
+      {
+        id: 55,
+        title: "The Art of Balancing Life - Dr. Madhu Mittal",
+        description: "Session moments from the national online seminar",
+        image: balancingLife6,
+      },
+      {
+        id: 56,
+        title: "The Art of Balancing Life - Namita Jend",
+        description: "Seminar coordination and participant engagement",
+        image: balancingLife7,
+      },
+      {
+        id: 57,
+        title: "The Art of Balancing Life - Holistic Development",
+        description: "Presentation on transformation and holistic development (समग्र विकास)",
+        image: balancingLife8,
+      },
+    ],
+  },
+  {
     id: "spectrum-2026",
     label: "Spectrum of Knowledge 2026",
     title: "Spectrum of Knowledge Conference 2026",
