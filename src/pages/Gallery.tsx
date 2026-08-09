@@ -73,6 +73,12 @@ const albums: GalleryAlbum[] = [
     meta: "From Comfort to Harmony · August 8, 2026 · Online",
     images: [
       {
+        id: 52,
+        title: "The Art of Balancing Life - Dr Priyanka Verma",
+        description: "Session on balancing mind, body, work, family and soul",
+        image: balancingLife3,
+      },
+      {
         id: 50,
         title: "The Art of Balancing Life - Seminar Session",
         description: "Himani Raizada addressing participants during the national online seminar (August 8, 2026)",
@@ -83,12 +89,6 @@ const albums: GalleryAlbum[] = [
         title: "The Art of Balancing Life - Speakers & Participants",
         description: "Resource persons and faculty participants during the seminar",
         image: balancingLife2,
-      },
-      {
-        id: 52,
-        title: "The Art of Balancing Life - Dr Priyanka Verma",
-        description: "Session on balancing mind, body, work, family and soul",
-        image: balancingLife3,
       },
       {
         id: 53,
