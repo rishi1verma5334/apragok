@@ -47,6 +47,8 @@ import balancingLife5 from "@/assets/events/balancing-life-photo5.jpeg";
 import balancingLife6 from "@/assets/events/balancing-life-photo6.jpeg";
 import balancingLife7 from "@/assets/events/balancing-life-photo7.jpeg";
 import balancingLife8 from "@/assets/events/balancing-life-photo8.jpeg";
+import balancingLife9 from "@/assets/events/balancing-life-photo9.jpeg";
+import balancingLife10 from "@/assets/events/balancing-life-photo10.jpeg";
 
 type GalleryImage = {
   id: number;
