@@ -39,6 +39,14 @@ import spectrumConfPhoto3 from "@/assets/events/spectrum-conf-photo3.jpeg";
 import spectrumConfPhoto4 from "@/assets/events/spectrum-conf-photo4.jpeg";
 import spectrumConfPhoto5 from "@/assets/events/spectrum-conf-photo5.jpeg";
 import spectrumConfPhoto6 from "@/assets/events/spectrum-conf-photo6.jpeg";
+import balancingLife1 from "@/assets/events/balancing-life-photo1.jpeg";
+import balancingLife2 from "@/assets/events/balancing-life-photo2.jpeg";
+import balancingLife3 from "@/assets/events/balancing-life-photo3.jpeg";
+import balancingLife4 from "@/assets/events/balancing-life-photo4.jpeg";
+import balancingLife5 from "@/assets/events/balancing-life-photo5.jpeg";
+import balancingLife6 from "@/assets/events/balancing-life-photo6.jpeg";
+import balancingLife7 from "@/assets/events/balancing-life-photo7.jpeg";
+import balancingLife8 from "@/assets/events/balancing-life-photo8.jpeg";
 
 type GalleryImage = {
   id: number;
