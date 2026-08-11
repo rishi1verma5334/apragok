@@ -50,6 +50,8 @@ const Workshops = () => {
   // Time-based content: events auto-hide once their date passes; discount auto-expires.
   const showFdpUpcoming = !isPastDate("June 20, 2026");
   const showSpectrumUpcoming = !isPastDate("June 27, 2026");
+  const showKnowledgeNexus = !isPastDate("September 20, 2026");
+
   const showEarlyBird = isBeforeDate("June 5, 2026");
 
   const toggleEvent = (id: string) => {
