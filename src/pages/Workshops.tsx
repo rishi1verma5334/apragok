@@ -16,6 +16,9 @@ import fdpAiEducationPage2 from "@/assets/events/fdp-ai-education-page2.jpg";
 import spectrumPage1 from "@/assets/events/spectrum-conference-page1.jpg";
 import spectrumPage2 from "@/assets/events/spectrum-conference-page2.jpg";
 import fdpAiEducationS2 from "@/assets/events/fdp-ai-education-s2.jpg";
+import knowledgeNexusPage1 from "@/assets/events/knowledge-nexus-page1.jpg";
+import knowledgeNexusPage2 from "@/assets/events/knowledge-nexus-page2.jpg";
+
 
 const features = [
   {
@@ -47,6 +50,8 @@ const Workshops = () => {
   // Time-based content: events auto-hide once their date passes; discount auto-expires.
   const showFdpUpcoming = !isPastDate("June 20, 2026");
   const showSpectrumUpcoming = !isPastDate("June 27, 2026");
+  const showKnowledgeNexus = !isPastDate("September 20, 2026");
+
   const showEarlyBird = isBeforeDate("June 5, 2026");
 
   const toggleEvent = (id: string) => {
@@ -102,7 +107,130 @@ const Workshops = () => {
         </div>
       </section>
 
+      {/* Upcoming Event - Knowledge Nexus 2026 */}
+      {showKnowledgeNexus && (
+      <section className="py-16 bg-primary/10 border-y-2 border-primary/20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <Badge className="mb-4 bg-primary text-primary-foreground">
+              <Calendar size={14} className="mr-1" />
+              Upcoming Event
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-3 sm:mb-4">
+              Knowledge Nexus 2026 — Bridging Research, Innovation & Impact
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
+              Two-Day Online International Multidisciplinary Conference · ISBN Q3 Compendium Publication
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
+              <span className="flex items-center gap-1">
+                <Calendar size={16} className="text-primary" />
+                19–20 September 2026 · 11:00 AM – 5:00 PM
+              </span>
+              <span className="flex items-center gap-1">
+                <MapPin size={16} className="text-primary" />
+                Online (Google Meet)
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              onClick={() => openLightbox(knowledgeNexusPage1, "Knowledge Nexus 2026 brochure — about the conference")}
+              className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+            >
+              <img
+                src={knowledgeNexusPage1}
+                alt="Knowledge Nexus 2026 brochure — about the conference"
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              onClick={() => openLightbox(knowledgeNexusPage2, "Knowledge Nexus 2026 brochure — conference tracks and guidelines")}
+              className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+            >
+              <img
+                src={knowledgeNexusPage2}
+                alt="Knowledge Nexus 2026 brochure — conference tracks and guidelines"
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center space-y-4"
+          >
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+                asChild
+              >
+                <a href="https://forms.gle/niiXeBqXgg5b4vxF9" target="_blank" rel="noopener noreferrer">
+                  Paper + ISBN Publication
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+                asChild
+              >
+                <a href="https://forms.gle/xBXqW7Nh6AGBvmxs5" target="_blank" rel="noopener noreferrer">
+                  Paper Presentation Only
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+                asChild
+              >
+                <a href="https://forms.gle/Payu7cChFTRi3R6J8" target="_blank" rel="noopener noreferrer">
+                  Participation Only
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="ghost"
+                className="rounded-full px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-lg"
+                asChild
+              >
+                <Link to="/workshops/knowledge-nexus-2026">More Details</Link>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Abstract submission: 30 August 2026 · Only 50 presentation slots — first-come, first-reviewed, first-confirmed
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      )}
+
       {/* Upcoming Event - FDP Series 2: AI Powered Education */}
+
       {showFdpUpcoming && (
       <section className="py-16 bg-primary/5 border-y border-primary/20">
         <div className="container mx-auto px-4 lg:px-8">

@@ -24,7 +24,14 @@ const allUpcomingEvents: UpcomingEvent[] = [
     location: "Online (Google Meet)",
     href: "/workshops",
   },
+  {
+    title: "Knowledge Nexus 2026 — International Conference",
+    date: "September 20, 2026",
+    location: "Online (Google Meet)",
+    href: "/workshops/knowledge-nexus-2026",
+  },
 ];
+
 
 const EventRibbon = () => {
   const [index, setIndex] = useState(0);
