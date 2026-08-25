@@ -60,6 +60,10 @@ import aiWorkshopD1Photo8 from "@/assets/events/ai-workshop-d1-photo8.jpeg";
 import aiWorkshopD2Photo1 from "@/assets/events/ai-workshop-d2-photo1.jpeg";
 import aiWorkshopD2Photo2 from "@/assets/events/ai-workshop-d2-photo2.jpeg";
 import aiWorkshopD2Photo3 from "@/assets/events/ai-workshop-d2-photo3.jpeg";
+import aiWorkshopD3Photo1 from "@/assets/events/ai-workshop-d3-photo1.jpeg";
+import aiWorkshopD3Photo2 from "@/assets/events/ai-workshop-d3-photo2.jpeg";
+import aiWorkshopD3Photo3 from "@/assets/events/ai-workshop-d3-photo3.jpeg";
+import aiWorkshopD3Photo4 from "@/assets/events/ai-workshop-d3-photo4.jpeg";
 
 type GalleryImage = {
   id: number;
