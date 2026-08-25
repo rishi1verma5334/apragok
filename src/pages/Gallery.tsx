@@ -57,6 +57,9 @@ import aiWorkshopD1Photo5 from "@/assets/events/ai-workshop-d1-photo5.jpeg";
 import aiWorkshopD1Photo6 from "@/assets/events/ai-workshop-d1-photo6.jpeg";
 import aiWorkshopD1Photo7 from "@/assets/events/ai-workshop-d1-photo7.jpeg";
 import aiWorkshopD1Photo8 from "@/assets/events/ai-workshop-d1-photo8.jpeg";
+import aiWorkshopD2Photo1 from "@/assets/events/ai-workshop-d2-photo1.jpeg";
+import aiWorkshopD2Photo2 from "@/assets/events/ai-workshop-d2-photo2.jpeg";
+import aiWorkshopD2Photo3 from "@/assets/events/ai-workshop-d2-photo3.jpeg";
 
 type GalleryImage = {
   id: number;
