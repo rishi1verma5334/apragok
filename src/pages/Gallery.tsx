@@ -87,6 +87,46 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "ai-powered-education-workshop-day4",
+    label: "AI-Powered Education — Day 4",
+    title: "Six-Day Online Workshop: AI-Powered Education — Day 4",
+    meta: "Enhancing Student Engagement and Outcomes · August 6, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 75,
+        title: "Day 4 - Participant Presentation",
+        description: "Participants sharing their learning during the Day 4 session",
+        image: aiWorkshopD4Photo1,
+      },
+      {
+        id: 76,
+        title: "Day 4 - Resource Persons & Participants",
+        description:
+          "Dr Priyanka Verma, Dr. Keemti Gaur and Himani Raizada with the participants",
+        image: aiWorkshopD4Photo2,
+      },
+      {
+        id: 77,
+        title: "Day 4 - Himani Raizada",
+        description: "Session on AI tools for classroom teaching and learning",
+        image: aiWorkshopD4Photo3,
+      },
+      {
+        id: 78,
+        title: "Day 4 - Tool: Eduaide.AI",
+        description:
+          "Walkthrough of Eduaide.AI for lesson plans, rubrics, quizzes and instructional materials",
+        image: aiWorkshopD4Photo4,
+      },
+      {
+        id: 79,
+        title: "Day 4 - Interactive Q&A",
+        description: "Participants raising hands and engaging in the Day 4 discussion",
+        image: aiWorkshopD4Photo5,
+      },
+    ],
+  },
+  {
     id: "ai-powered-education-workshop-day3",
     label: "AI-Powered Education — Day 3",
     title: "Six-Day Online Workshop: AI-Powered Education — Day 3",
