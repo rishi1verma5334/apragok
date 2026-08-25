@@ -49,6 +49,14 @@ import balancingLife7 from "@/assets/events/balancing-life-photo7.jpeg";
 import balancingLife8 from "@/assets/events/balancing-life-photo8.jpeg";
 import balancingLife9 from "@/assets/events/balancing-life-photo9.jpeg";
 import balancingLife10 from "@/assets/events/balancing-life-photo10.jpeg";
+import aiWorkshopD1Photo1 from "@/assets/events/ai-workshop-d1-photo1.jpeg";
+import aiWorkshopD1Photo2 from "@/assets/events/ai-workshop-d1-photo2.jpeg";
+import aiWorkshopD1Photo3 from "@/assets/events/ai-workshop-d1-photo3.jpeg";
+import aiWorkshopD1Photo4 from "@/assets/events/ai-workshop-d1-photo4.jpeg";
+import aiWorkshopD1Photo5 from "@/assets/events/ai-workshop-d1-photo5.jpeg";
+import aiWorkshopD1Photo6 from "@/assets/events/ai-workshop-d1-photo6.jpeg";
+import aiWorkshopD1Photo7 from "@/assets/events/ai-workshop-d1-photo7.jpeg";
+import aiWorkshopD1Photo8 from "@/assets/events/ai-workshop-d1-photo8.jpeg";
 
 type GalleryImage = {
   id: number;
@@ -66,6 +74,64 @@ type GalleryAlbum = {
 };
 
 const albums: GalleryAlbum[] = [
+  {
+    id: "ai-powered-education-workshop-day1",
+    label: "AI-Powered Education — Day 1",
+    title: "Six-Day Online Workshop: AI-Powered Education — Day 1",
+    meta: "Enhancing Student Engagement and Outcomes · August 3, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 60,
+        title: "Day 1 - Inaugural Session",
+        description:
+          "Resource persons and participants joining the opening session of the six-day online workshop",
+        image: aiWorkshopD1Photo1,
+      },
+      {
+        id: 61,
+        title: "Day 1 - Namita Jend",
+        description: "Session on AI-powered education for B.Ed. students of VMLG College",
+        image: aiWorkshopD1Photo2,
+      },
+      {
+        id: 62,
+        title: "Day 1 - Dr Priyanka Verma",
+        description: "Welcome address by CEO, APRA: Group of Knowledge",
+        image: aiWorkshopD1Photo3,
+      },
+      {
+        id: 63,
+        title: "Day 1 - Tool 1: ChatGPT",
+        description: "Demonstration of lesson planning, question generation and rubric creation",
+        image: aiWorkshopD1Photo4,
+      },
+      {
+        id: 64,
+        title: "Day 1 - Interactive Mentimeter Activity",
+        description: "Participants sharing what comes to mind when they hear \"Artificial Intelligence\"",
+        image: aiWorkshopD1Photo5,
+      },
+      {
+        id: 65,
+        title: "Day 1 - AI Technologies in Education",
+        description:
+          "Overview of intelligent tutoring systems, generative AI, machine learning and NLP",
+        image: aiWorkshopD1Photo6,
+      },
+      {
+        id: 66,
+        title: "Day 1 - Tool 3: Microsoft Copilot",
+        description: "Practical uses of Microsoft Copilot in teaching, with prompts and best practices",
+        image: aiWorkshopD1Photo7,
+      },
+      {
+        id: 67,
+        title: "Day 1 - Hands-on AI Demonstration",
+        description: "Live demonstration of AI-generated teaching resources for classroom use",
+        image: aiWorkshopD1Photo8,
+      },
+    ],
+  },
   {
     id: "balancing-life-2026",
     label: "The Art of Balancing Life",
