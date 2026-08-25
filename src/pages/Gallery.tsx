@@ -82,6 +82,41 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "ai-powered-education-workshop-day3",
+    label: "AI-Powered Education — Day 3",
+    title: "Six-Day Online Workshop: AI-Powered Education — Day 3",
+    meta: "Enhancing Student Engagement and Outcomes · August 5, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 71,
+        title: "Day 3 - Session in Progress",
+        description:
+          "Resource persons and participants during the Day 3 session of the six-day online workshop",
+        image: aiWorkshopD3Photo1,
+      },
+      {
+        id: 72,
+        title: "Day 3 - ICT in Education",
+        description:
+          "Dr Priyanka Verma and Himani Raizada explaining the components of ICT in education",
+        image: aiWorkshopD3Photo2,
+      },
+      {
+        id: 73,
+        title: "Day 3 - Participants",
+        description: "Faculty and B.Ed. students of VMLG College attending the Day 3 session",
+        image: aiWorkshopD3Photo3,
+      },
+      {
+        id: 74,
+        title: "Day 3 - Live Interactive Activity",
+        description:
+          "Hands-on classroom activity with a live QR-based student participation tool",
+        image: aiWorkshopD3Photo4,
+      },
+    ],
+  },
+  {
     id: "ai-powered-education-workshop-day2",
     label: "AI-Powered Education — Day 2",
     title: "Six-Day Online Workshop: AI-Powered Education — Day 2",
