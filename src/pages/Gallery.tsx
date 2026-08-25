@@ -49,6 +49,14 @@ import balancingLife7 from "@/assets/events/balancing-life-photo7.jpeg";
 import balancingLife8 from "@/assets/events/balancing-life-photo8.jpeg";
 import balancingLife9 from "@/assets/events/balancing-life-photo9.jpeg";
 import balancingLife10 from "@/assets/events/balancing-life-photo10.jpeg";
+import aiWorkshopD1Photo1 from "@/assets/events/ai-workshop-d1-photo1.jpeg";
+import aiWorkshopD1Photo2 from "@/assets/events/ai-workshop-d1-photo2.jpeg";
+import aiWorkshopD1Photo3 from "@/assets/events/ai-workshop-d1-photo3.jpeg";
+import aiWorkshopD1Photo4 from "@/assets/events/ai-workshop-d1-photo4.jpeg";
+import aiWorkshopD1Photo5 from "@/assets/events/ai-workshop-d1-photo5.jpeg";
+import aiWorkshopD1Photo6 from "@/assets/events/ai-workshop-d1-photo6.jpeg";
+import aiWorkshopD1Photo7 from "@/assets/events/ai-workshop-d1-photo7.jpeg";
+import aiWorkshopD1Photo8 from "@/assets/events/ai-workshop-d1-photo8.jpeg";
 
 type GalleryImage = {
   id: number;
