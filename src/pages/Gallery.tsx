@@ -78,6 +78,35 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "ai-powered-education-workshop-day2",
+    label: "AI-Powered Education — Day 2",
+    title: "Six-Day Online Workshop: AI-Powered Education — Day 2",
+    meta: "Enhancing Student Engagement and Outcomes · August 4, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 68,
+        title: "Day 2 - The AI Teaching Assistant",
+        description:
+          "Dr Priyanka Verma introducing free AI tools for teaching and content creation",
+        image: aiWorkshopD2Photo1,
+      },
+      {
+        id: 69,
+        title: "Day 2 - Tool 1: Brisk AI",
+        description:
+          "Dr. Keemti Gaur demonstrating Brisk AI for content creation, feedback and grading",
+        image: aiWorkshopD2Photo2,
+      },
+      {
+        id: 70,
+        title: "Day 2 - Hands-on Quiz Building",
+        description:
+          "Creating an AI-generated practice quiz on algebraic identities with Google Forms",
+        image: aiWorkshopD2Photo3,
+      },
+    ],
+  },
+  {
     id: "ai-powered-education-workshop-day1",
     label: "AI-Powered Education — Day 1",
     title: "Six-Day Online Workshop: AI-Powered Education — Day 1",
