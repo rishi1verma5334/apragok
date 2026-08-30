@@ -532,11 +532,11 @@ const Workshops = () => {
                     </p>
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div
-                        onClick={() => openLightbox(balancingLifeBrochure1.url, "The Art of Balancing Life - Seminar brochure (page 1)")}
+                        onClick={() => openLightbox(balancingLifeBrochure1, "The Art of Balancing Life - Seminar brochure (page 1)")}
                         className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
                       >
                         <img
-                          src={balancingLifeBrochure1.url}
+                          src={balancingLifeBrochure1}
                           alt="The Art of Balancing Life - Seminar brochure (page 1)"
                           className="w-full h-auto"
                           loading="lazy"
@@ -544,11 +544,11 @@ const Workshops = () => {
                         />
                       </div>
                       <div
-                        onClick={() => openLightbox(balancingLifeBrochure2.url, "The Art of Balancing Life - Seminar brochure (page 2)")}
+                        onClick={() => openLightbox(balancingLifeBrochure2, "The Art of Balancing Life - Seminar brochure (page 2)")}
                         className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
                       >
                         <img
-                          src={balancingLifeBrochure2.url}
+                          src={balancingLifeBrochure2}
                           alt="The Art of Balancing Life - Seminar brochure (page 2)"
                           className="w-full h-auto"
                           loading="lazy"
