@@ -107,6 +107,92 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "ai-powered-education-workshop-day6",
+    label: "AI-Powered Education — Day 6",
+    title: "Six-Day Online Workshop: AI-Powered Education — Day 6",
+    meta: "Enhancing Student Engagement and Outcomes · August 8, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 90,
+        title: "Day 6 - Participants",
+        description: "Google Meet grid view of Day 6 participants",
+        image: aiWorkshopD6Photo1,
+      },
+      {
+        id: 91,
+        title: "Day 6 - The AI Revolution in Education",
+        description: "Presentation on 'The AI Revolution in Education: Your New Superpower' by Dr. Priyanka Verma",
+        image: aiWorkshopD6Photo2,
+      },
+      {
+        id: 92,
+        title: "Day 6 - Your Future Classroom: Empowered by AI",
+        description: "Session slide on empowering future classrooms with AI tools and strategies",
+        image: aiWorkshopD6Photo3,
+      },
+      {
+        id: 93,
+        title: "Day 6 - Sneha RAI",
+        description: "Sneha RAI presenting during the Day 6 session",
+        image: aiWorkshopD6Photo4,
+      },
+      {
+        id: 94,
+        title: "Day 6 - Participant Grid",
+        description: "Participant grid featuring Dr. Priyanka Verma, Sneha RAI, Charu Chaudhary, Doli, Himani Raizada, Dr. Keemti Gaur, and Namita Jend",
+        image: aiWorkshopD6Photo5,
+      },
+      {
+        id: 95,
+        title: "Day 6 - Resource Persons & Participants",
+        description: "Participant grid featuring Kanak Solanki, Himani Raizada, Dr. Keemti Gaur, and Namita Jend",
+        image: aiWorkshopD6Photo6,
+      },
+      {
+        id: 96,
+        title: "Day 6 - Participants in Discussion",
+        description: "Participant grid during the Day 6 discussion",
+        image: aiWorkshopD6Photo7,
+      },
+      {
+        id: 97,
+        title: "Day 6 - Brisk AI",
+        description: "Walkthrough of Brisk AI: an AI-powered platform for creating interactive lessons, assessments, and classroom content",
+        image: aiWorkshopD6Photo8,
+      },
+      {
+        id: 98,
+        title: "Day 6 - Educational Need",
+        description: "Presentation on educational needs: personalized study, content creation, audio learning, and research synthesis",
+        image: aiWorkshopD6Photo9,
+      },
+      {
+        id: 99,
+        title: "Day 6 - NotebookLM Learning Outcomes",
+        description: "Infographic on NotebookLM learning outcomes: a path to academic mastery",
+        image: aiWorkshopD6Photo10,
+      },
+      {
+        id: 100,
+        title: "Day 6 - Energy Flow",
+        description: "Concept of Energy Flow (ऊर्जा का प्रवाह) explained during the session by Charu Chaudhary",
+        image: aiWorkshopD6Photo11,
+      },
+      {
+        id: 101,
+        title: "Day 6 - India's Physical Landscape",
+        description: "Summary of India's physical landscape presented by Anukriti Singh",
+        image: aiWorkshopD6Photo12,
+      },
+      {
+        id: 102,
+        title: "Day 6 - Shashi Malik",
+        description: "Shashi Malik speaking during the Day 6 workshop",
+        image: aiWorkshopD6Photo13,
+      },
+    ],
+  },
+  {
     id: "ai-powered-education-workshop-day5",
     label: "AI-Powered Education — Day 5",
     title: "Six-Day Online Workshop: AI-Powered Education — Day 5",
