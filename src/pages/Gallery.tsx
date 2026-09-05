@@ -76,6 +76,20 @@ import aiWorkshopD5Photo4 from "@/assets/events/ai-workshop-d5-photo4.jpeg";
 import aiWorkshopD5Photo5 from "@/assets/events/ai-workshop-d5-photo5.jpeg";
 import aiWorkshopD5Photo6 from "@/assets/events/ai-workshop-d5-photo6.jpeg";
 
+import aiWorkshopD6Photo1 from "@/assets/events/ai-workshop-d6-photo1.jpeg";
+import aiWorkshopD6Photo2 from "@/assets/events/ai-workshop-d6-photo2.jpeg";
+import aiWorkshopD6Photo3 from "@/assets/events/ai-workshop-d6-photo3.jpeg";
+import aiWorkshopD6Photo4 from "@/assets/events/ai-workshop-d6-photo4.jpeg";
+import aiWorkshopD6Photo5 from "@/assets/events/ai-workshop-d6-photo5.jpeg";
+import aiWorkshopD6Photo6 from "@/assets/events/ai-workshop-d6-photo6.jpeg";
+import aiWorkshopD6Photo7 from "@/assets/events/ai-workshop-d6-photo7.jpeg";
+import aiWorkshopD6Photo8 from "@/assets/events/ai-workshop-d6-photo8.jpeg";
+import aiWorkshopD6Photo9 from "@/assets/events/ai-workshop-d6-photo9.jpeg";
+import aiWorkshopD6Photo10 from "@/assets/events/ai-workshop-d6-photo10.jpeg";
+import aiWorkshopD6Photo11 from "@/assets/events/ai-workshop-d6-photo11.jpeg";
+import aiWorkshopD6Photo12 from "@/assets/events/ai-workshop-d6-photo12.jpeg";
+import aiWorkshopD6Photo13 from "@/assets/events/ai-workshop-d6-photo13.jpeg";
+
 type GalleryImage = {
   id: number;
   title: string;
