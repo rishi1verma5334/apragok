@@ -93,6 +93,51 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "ai-powered-education-workshop-day5",
+    label: "AI-Powered Education — Day 5",
+    title: "Six-Day Online Workshop: AI-Powered Education — Day 5",
+    meta: "Enhancing Student Engagement and Outcomes · August 7, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 1,
+        title: "Day 5 - AI for Assessment & Learning Outcomes",
+        description:
+          "Session on transforming assessment workflows with intelligent automation and aligning evaluations with learning outcomes",
+        image: aiWorkshopD5Photo1,
+      },
+      {
+        id: 2,
+        title: "Day 5 - Dr Priyanka Verma",
+        description: "Dr. Priyanka Verma presenting on AI-powered assessment during the Day 5 session",
+        image: aiWorkshopD5Photo2,
+      },
+      {
+        id: 3,
+        title: "Day 5 - Participants",
+        description: "Resource persons and participants during the Day 5 session of the six-day online workshop",
+        image: aiWorkshopD5Photo3,
+      },
+      {
+        id: 4,
+        title: "Day 5 - Interactive Discussion",
+        description: "Participants raising hands and engaging in the Day 5 discussion",
+        image: aiWorkshopD5Photo4,
+      },
+      {
+        id: 5,
+        title: "Day 5 - Faculty & B.Ed. Students",
+        description: "Faculty and B.Ed. students of VMLG College attending the Day 5 session",
+        image: aiWorkshopD5Photo5,
+      },
+      {
+        id: 6,
+        title: "Day 5 - संसाधन और विकास",
+        description: "AI-generated presentation on Resources and Development demonstrated during the workshop",
+        image: aiWorkshopD5Photo6,
+      },
+    ],
+  },
+  {
     id: "ai-powered-education-workshop-day4",
     label: "AI-Powered Education — Day 4",
     title: "Six-Day Online Workshop: AI-Powered Education — Day 4",
