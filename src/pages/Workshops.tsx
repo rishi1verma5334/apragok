@@ -20,6 +20,8 @@ import knowledgeNexusPage1 from "@/assets/events/knowledge-nexus-page1.jpg";
 import knowledgeNexusPage2 from "@/assets/events/knowledge-nexus-page2.jpg";
 import balancingLifeBrochure1 from "@/assets/events/balancing-life-brochure-1.jpeg";
 import balancingLifeBrochure2 from "@/assets/events/balancing-life-brochure-2.jpeg";
+import spectrumBrochure2026Page1 from "@/assets/events/spectrum-conference-brochure-2026-page1.jpg";
+import spectrumBrochure2026Page2 from "@/assets/events/spectrum-conference-brochure-2026-page2.jpg";
 
 
 const features = [
