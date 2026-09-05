@@ -567,6 +567,66 @@ const Workshops = () => {
             </AnimatePresence>
           </div>
 
+          {/* Event 0.5: Spectrum of Knowledge Conference 2026 */}
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("spectrum-2026")}
+              className="w-full text-center group cursor-pointer"
+            >
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>Spectrum of Knowledge Conference 2026</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "spectrum-2026" ? "rotate-180" : ""}`} />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                June 27, 2026 · Online (Google Meet)
+              </p>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "spectrum-2026" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Online National Conference promoting excellence in multidisciplinary research — ISBN publication opportunity, e-certificates, and best paper awards.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div
+                        onClick={() => openLightbox(spectrumBrochure2026Page1, "Spectrum of Knowledge Conference 2026 - Call for Papers and registration")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
+                        <img
+                          src={spectrumBrochure2026Page1}
+                          alt="Spectrum of Knowledge Conference 2026 - Call for Papers and registration"
+                          className="w-full h-auto"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div
+                        onClick={() => openLightbox(spectrumBrochure2026Page2, "Spectrum of Knowledge Conference 2026 - Guidelines and sub-themes")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
+                        <img
+                          src={spectrumBrochure2026Page2}
+                          alt="Spectrum of Knowledge Conference 2026 - Guidelines and sub-themes"
+                          className="w-full h-auto"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Event 0: FDP Series 2 (auto-moves here once its date passes) */}
           {!showFdpUpcoming && (
           <div className="max-w-5xl mx-auto mb-4">
