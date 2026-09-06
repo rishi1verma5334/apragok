@@ -226,7 +226,7 @@ const Workshops = () => {
               </Button>
             </div>
             <p className="text-sm text-muted-foreground">
-              Abstract submission: 30 August 2026 · Only 50 presentation slots — first-come, first-reviewed, first-confirmed
+              Registration and abstract submission: 10 September 2026 · Only 50 presentation slots — first-come, first-reviewed, first-confirmed
             </p>
           </motion.div>
         </div>
