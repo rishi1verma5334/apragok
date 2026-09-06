@@ -60,7 +60,7 @@ const benefits = [
 ];
 
 const importantDates = [
-  { label: "Last Date for Abstract Submission", value: "30 August 2026" },
+  { label: "Registration and Abstract Submission Deadline", value: "10 September 2026" },
   { label: "Last Date for Full Paper Submission", value: "5 September 2026" },
   { label: "Registration Deadline (participation only)", value: "15 September 2026" },
   { label: "Conference Dates", value: "19–20 September 2026" },
@@ -71,7 +71,7 @@ const tracks = [
   {
     title: "Track 1: Indian Knowledge Systems (IKS) & Bharatiya Knowledge Traditions",
     items:
-      "NEP 2020 and IKS · Integration of IKS in Higher Education · Ancient Indian Scientific & Technological Heritage · Indian Philosophy and Ethics · Vedic Mathematics · Ayurveda, Yoga & Holistic Health · Sanskrit and Classical Knowledge Traditions · Indigenous Knowledge & Sustainable Development · Traditional Ecological Knowledge · Indian Arts, Literature & Heritage · Value-Based Education · Traditional Agricultural Practices · Indigenous Innovation & Rural Development",
+      "NEP 2020 and IKS · Integration of IKS in Higher Education · Ancient Indian Scientific & Technological Heritage · Indian Philosophy and Ethics · Vedic Mathematics and Computational Thinking · Ayurveda, Yoga & Holistic Health · Sanskrit and Classical Knowledge Traditions · Indigenous Knowledge & Sustainable Development · Traditional Ecological Knowledge · Indian Arts, Literature & Heritage · Value-Based Education · Traditional Agricultural Practices · Indigenous Innovation & Rural Development",
   },
   {
     title: "Track 2: Education and Educational Innovation",
@@ -86,7 +86,7 @@ const tracks = [
   {
     title: "Track 4: Business, Commerce and Entrepreneurship",
     items:
-      "Entrepreneurship & Innovation · Digital Marketing · Business Analytics · FinTech · Human Resource Management · Strategic Management · Supply Chain Management · Sustainable Business Practices · Start-up Ecosystem · Corporate Governance",
+      "Entrepreneurship & Innovation · Digital Marketing · Business Analytics · Financial Technology (FinTech) · Human Resource Management · Strategic Management · Supply Chain Management · Sustainable Business Practices · Start-up Ecosystem · Corporate Governance",
   },
   {
     title: "Track 5: Science, Engineering and Sustainable Development",
