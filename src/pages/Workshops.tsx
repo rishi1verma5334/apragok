@@ -22,6 +22,7 @@ import balancingLifeBrochure1 from "@/assets/events/balancing-life-brochure-1.jp
 import balancingLifeBrochure2 from "@/assets/events/balancing-life-brochure-2.jpeg";
 import spectrumBrochure2026Page1 from "@/assets/events/spectrum-conference-brochure-2026-page1.jpg";
 import spectrumBrochure2026Page2 from "@/assets/events/spectrum-conference-brochure-2026-page2.jpg";
+import aiPoweredEducationSixDayWorkshop from "@/assets/events/ai-powered-education-six-day-workshop.jpg";
 
 
 const features = [
@@ -502,6 +503,52 @@ const Workshops = () => {
               A look back at the workshops, conferences, and training programs we've organized.
             </p>
           </motion.div>
+
+          {/* Six-Day Online Workshop: AI-Powered Education */}
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("ai-powered-education-six-day")}
+              className="w-full text-center group cursor-pointer"
+            >
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>Six-Day Online Workshop — AI-Powered Education</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "ai-powered-education-six-day" ? "rotate-180" : ""}`} />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                August 3–8 & 10, 2026 · 12:00 PM–1:00 PM · Online (Google Meet)
+              </p>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "ai-powered-education-six-day" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Enhancing Student Engagement and Outcomes — a six-day workshop for B.Ed. students of VMLG College, held in academic collaboration with APRA Group of Knowledge.
+                    </p>
+                    <div
+                      onClick={() => openLightbox(aiPoweredEducationSixDayWorkshop, "Six-Day Online Workshop — AI-Powered Education brochure")}
+                      className="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                    >
+                      <img
+                        src={aiPoweredEducationSixDayWorkshop}
+                        alt="Six-Day Online Workshop — AI-Powered Education brochure"
+                        className="w-full h-auto"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Event -1: The Art of Balancing Life (concluded) */}
           <div className="max-w-5xl mx-auto mb-4">
