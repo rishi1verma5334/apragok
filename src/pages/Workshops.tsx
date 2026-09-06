@@ -515,7 +515,7 @@ const Workshops = () => {
                 <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "ai-powered-education-six-day" ? "rotate-180" : ""}`} />
               </h3>
               <p className="text-muted-foreground text-sm">
-                August 3–8 & 10, 2026 · 12:00 PM–1:00 PM · Online (Google Meet)
+                August 3–7 & 10, 2026 · 12:00 PM–1:00 PM · Online (Google Meet)
               </p>
             </button>
 
