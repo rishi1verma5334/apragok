@@ -61,7 +61,7 @@ const benefits = [
 
 const importantDates = [
   { label: "Registration and Abstract Submission Deadline", value: "10 September 2026" },
-  { label: "Last Date for Full Paper Submission", value: "5 September 2026" },
+  { label: "Last Date for Full Paper Submission", value: "15 September 2026" },
   { label: "Registration Deadline (participation only)", value: "15 September 2026" },
   { label: "Conference Dates", value: "19–20 September 2026" },
   { label: "Publication of ISBN Compendium", value: "November 2026" },
