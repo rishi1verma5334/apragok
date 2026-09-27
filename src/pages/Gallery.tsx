@@ -90,6 +90,29 @@ import aiWorkshopD6Photo11 from "@/assets/events/ai-workshop-d6-photo11.jpeg";
 import aiWorkshopD6Photo12 from "@/assets/events/ai-workshop-d6-photo12.jpeg";
 import aiWorkshopD6Photo13 from "@/assets/events/ai-workshop-d6-photo13.jpeg";
 
+import knowledgeNexusPhoto1 from "@/assets/events/knowledge-nexus-photo1.jpeg";
+import knowledgeNexusPhoto2 from "@/assets/events/knowledge-nexus-photo2.jpeg";
+import knowledgeNexusPhoto3 from "@/assets/events/knowledge-nexus-photo3.jpeg";
+import knowledgeNexusPhoto4 from "@/assets/events/knowledge-nexus-photo4.jpeg";
+import knowledgeNexusPhoto5 from "@/assets/events/knowledge-nexus-photo5.jpeg";
+import knowledgeNexusPhoto6 from "@/assets/events/knowledge-nexus-photo6.jpeg";
+import knowledgeNexusPhoto7 from "@/assets/events/knowledge-nexus-photo7.jpeg";
+import knowledgeNexusPhoto8 from "@/assets/events/knowledge-nexus-photo8.jpeg";
+import knowledgeNexusPhoto9 from "@/assets/events/knowledge-nexus-photo9.jpeg";
+import knowledgeNexusPhoto10 from "@/assets/events/knowledge-nexus-photo10.jpeg";
+import knowledgeNexusPhoto11 from "@/assets/events/knowledge-nexus-photo11.jpeg";
+import knowledgeNexusPhoto12 from "@/assets/events/knowledge-nexus-photo12.jpeg";
+import knowledgeNexusPhoto13 from "@/assets/events/knowledge-nexus-photo13.jpeg";
+import knowledgeNexusPhoto14 from "@/assets/events/knowledge-nexus-photo14.jpeg";
+import knowledgeNexusPhoto15 from "@/assets/events/knowledge-nexus-photo15.jpeg";
+import knowledgeNexusPhoto16 from "@/assets/events/knowledge-nexus-photo16.jpeg";
+import knowledgeNexusPhoto17 from "@/assets/events/knowledge-nexus-photo17.jpeg";
+import knowledgeNexusPhoto18 from "@/assets/events/knowledge-nexus-photo18.jpeg";
+import knowledgeNexusPhoto19 from "@/assets/events/knowledge-nexus-photo19.jpeg";
+import knowledgeNexusPhoto20 from "@/assets/events/knowledge-nexus-photo20.jpeg";
+import knowledgeNexusPhoto21 from "@/assets/events/knowledge-nexus-photo21.jpeg";
+
+
 type GalleryImage = {
   id: number;
   title: string;
