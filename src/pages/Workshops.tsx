@@ -504,6 +504,69 @@ const Workshops = () => {
             </p>
           </motion.div>
 
+          {/* Two-Day International Conference: Knowledge Nexus 2026 (concluded) */}
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("knowledge-nexus-2026")}
+              className="w-full text-center group cursor-pointer"
+            >
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>Knowledge Nexus 2026 — Bridging Research, Innovation & Impact</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "knowledge-nexus-2026" ? "rotate-180" : ""}`} />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                September 19–20, 2026 · 11:00 AM–5:00 PM · Online (Google Meet)
+              </p>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "knowledge-nexus-2026" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      Two-Day Online International Multidisciplinary Conference with ISBN Q3 Compendium publication, organised by APRA Group of Knowledge.
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-6">
+                      <div
+                        onClick={() => openLightbox(knowledgeNexusPage1, "Knowledge Nexus 2026 brochure — about the conference")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
+                        <img
+                          src={knowledgeNexusPage1}
+                          alt="Knowledge Nexus 2026 brochure — about the conference"
+                          className="w-full h-auto"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div
+                        onClick={() => openLightbox(knowledgeNexusPage2, "Knowledge Nexus 2026 brochure — conference tracks and guidelines")}
+                        className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                      >
+                        <img
+                          src={knowledgeNexusPage2}
+                          alt="Knowledge Nexus 2026 brochure — conference tracks and guidelines"
+                          className="w-full h-auto"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
+                    <Link to="/workshops/knowledge-nexus-2026" className="text-primary font-semibold hover:underline text-sm">
+                      View Event Details →
+                    </Link>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Six-Day Online Workshop: AI-Powered Education */}
           <div className="max-w-5xl mx-auto mb-4">
             <button
