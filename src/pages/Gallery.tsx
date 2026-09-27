@@ -145,7 +145,7 @@ const albums: GalleryAlbum[] = [
       {
         id: 104,
         title: "Knowledge Nexus 2026 - Sudesh Yadav",
-        description: "Presentation on the National Education Policy 2020 and its impact on teaching practice",
+        description: "Presentation on effective classroom learning without digital tools",
         image: knowledgeNexusPhoto2,
       },
       {
