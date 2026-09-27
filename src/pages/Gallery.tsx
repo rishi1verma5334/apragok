@@ -130,6 +130,141 @@ type GalleryAlbum = {
 
 const albums: GalleryAlbum[] = [
   {
+    id: "knowledge-nexus-2026",
+    label: "Knowledge Nexus 2026",
+    title: "Knowledge Nexus 2026 — Bridging Research, Innovation & Impact",
+    meta: "Two-Day Online International Conference · September 19–20, 2026 · Online (Google Meet)",
+    images: [
+      {
+        id: 103,
+        title: "Knowledge Nexus 2026 - Paper Presentation",
+        description:
+          "Research presentation on Virtual Reality tools for learners with visual impairments under NEP 2020",
+        image: knowledgeNexusPhoto1,
+      },
+      {
+        id: 104,
+        title: "Knowledge Nexus 2026 - Sudesh Yadav",
+        description: "Presentation on the National Education Policy 2020 and its impact on teaching practice",
+        image: knowledgeNexusPhoto2,
+      },
+      {
+        id: 105,
+        title: "Knowledge Nexus 2026 - Session Discussion",
+        description: "Resource persons exchanging feedback during the paper presentation session",
+        image: knowledgeNexusPhoto3,
+      },
+      {
+        id: 106,
+        title: "Knowledge Nexus 2026 - Anshu Agrawal",
+        description: "Presentation on colour symbolism in contemporary anime: background and rationale",
+        image: knowledgeNexusPhoto4,
+      },
+      {
+        id: 107,
+        title: "Knowledge Nexus 2026 - Research Gap",
+        description: "Anshu Agrawal outlining the research gap in anime scholarship and colour-emotion association",
+        image: knowledgeNexusPhoto5,
+      },
+      {
+        id: 108,
+        title: "Knowledge Nexus 2026 - Theoretical Framework",
+        description: "Presentation on semiotics, colour theory and emotion theory as the study's framework",
+        image: knowledgeNexusPhoto6,
+      },
+      {
+        id: 109,
+        title: "Knowledge Nexus 2026 - Namita Jend",
+        description: "Presenting the methodology of her study during the conference session",
+        image: knowledgeNexusPhoto7,
+      },
+      {
+        id: 110,
+        title: "Knowledge Nexus 2026 - Tanya Gupta",
+        description: "Presentation on human rights awareness through literature and stories",
+        image: knowledgeNexusPhoto8,
+      },
+      {
+        id: 111,
+        title: "Knowledge Nexus 2026 - Anuradha Yadav",
+        description: "A study of orientation and mobility skills among students with visual impairment",
+        image: knowledgeNexusPhoto9,
+      },
+      {
+        id: 112,
+        title: "Knowledge Nexus 2026 - Data Analysis",
+        description: "Presenting survey data and charts during the research session",
+        image: knowledgeNexusPhoto10,
+      },
+      {
+        id: 113,
+        title: "Knowledge Nexus 2026 - Dr Keemti Gaur",
+        description: "Convener Dr. Keemti Gaur addressing participants during the conference",
+        image: knowledgeNexusPhoto11,
+      },
+      {
+        id: 114,
+        title: "Knowledge Nexus 2026 - Keynote Session",
+        description: "Session address with the Knowledge Nexus 2026 conference backdrop",
+        image: knowledgeNexusPhoto12,
+      },
+      {
+        id: 115,
+        title: "Knowledge Nexus 2026 - Speaker Session",
+        description: "Resource person speaking during the two-day online conference",
+        image: knowledgeNexusPhoto13,
+      },
+      {
+        id: 116,
+        title: "Knowledge Nexus 2026 - Session in Progress",
+        description: "Speaker and participants during the Knowledge Nexus 2026 proceedings",
+        image: knowledgeNexusPhoto14,
+      },
+      {
+        id: 117,
+        title: "Knowledge Nexus 2026 - Resource Persons",
+        description: "Resource persons interacting with participants during the session",
+        image: knowledgeNexusPhoto15,
+      },
+      {
+        id: 118,
+        title: "Knowledge Nexus 2026 - Participant Interaction",
+        description: "Participants engaging with the speakers during the online conference",
+        image: knowledgeNexusPhoto16,
+      },
+      {
+        id: 119,
+        title: "Knowledge Nexus 2026 - Panel Discussion",
+        description: "Speakers and participants during the conference panel discussion",
+        image: knowledgeNexusPhoto17,
+      },
+      {
+        id: 120,
+        title: "Knowledge Nexus 2026 - Participant Discussion",
+        description: "Open discussion among participants of the international conference",
+        image: knowledgeNexusPhoto18,
+      },
+      {
+        id: 121,
+        title: "Knowledge Nexus 2026 - Dr Priyanka Verma",
+        description: "CEO, APRA: Group of Knowledge, addressing the conference participants",
+        image: knowledgeNexusPhoto19,
+      },
+      {
+        id: 122,
+        title: "Knowledge Nexus 2026 - Session Address",
+        description: "Resource person delivering a session during the conference",
+        image: knowledgeNexusPhoto20,
+      },
+      {
+        id: 123,
+        title: "Knowledge Nexus 2026 - Valedictory Session",
+        description: "Closing moments of the conference with the 'Bharat Bhagya Vidhata' presentation",
+        image: knowledgeNexusPhoto21,
+      },
+    ],
+  },
+  {
     id: "ai-powered-education-workshop-day6",
     label: "AI-Powered Education — Day 6",
     title: "Six-Day Online Workshop: AI-Powered Education — Day 6",
