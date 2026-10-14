@@ -23,6 +23,7 @@ import balancingLifeBrochure2 from "@/assets/events/balancing-life-brochure-2.jp
 import spectrumBrochure2026Page1 from "@/assets/events/spectrum-conference-brochure-2026-page1.jpg";
 import spectrumBrochure2026Page2 from "@/assets/events/spectrum-conference-brochure-2026-page2.jpg";
 import aiPoweredEducationSixDayWorkshop from "@/assets/events/ai-powered-education-six-day-workshop.jpg";
+import transformingClassroomWorkshop from "@/assets/events/transforming-classroom-challenges-workshop.jpg";
 
 
 const features = [
@@ -503,6 +504,52 @@ const Workshops = () => {
               A look back at the workshops, conferences, and training programs we've organized.
             </p>
           </motion.div>
+
+          {/* One-Day Workshop: Transforming Classroom Challenges into Research */}
+          <div className="max-w-5xl mx-auto mb-4">
+            <button
+              onClick={() => toggleEvent("transforming-classroom-challenges")}
+              className="w-full text-center group cursor-pointer"
+            >
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary hover:text-primary/80 transition-colors mb-1 inline-flex items-center gap-2 px-2">
+                <span>Transforming Classroom Challenges into Research</span>
+                <ChevronDown size={20} className={`shrink-0 transition-transform duration-300 ${expandedEvent === "transforming-classroom-challenges" ? "rotate-180" : ""}`} />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                October 9, 2026 · 12:00 PM–1:00 PM · Modern College of Professional Studies, Ghaziabad
+              </p>
+            </button>
+
+            <AnimatePresence>
+              {expandedEvent === "transforming-classroom-challenges" && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-6 text-center">
+                    <p className="text-muted-foreground mb-4">
+                      One-day workshop on action research for reflective and effective teaching, organized by the Research Development & IPR Cell of Modern College of Professional Studies in collaboration with APRA Group of Knowledge. Speaker: Ms. Himani Raizada.
+                    </p>
+                    <div
+                      onClick={() => openLightbox(transformingClassroomWorkshop, "Transforming Classroom Challenges into Research workshop flyer")}
+                      className="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+                    >
+                      <img
+                        src={transformingClassroomWorkshop}
+                        alt="Workshop flyer for Transforming Classroom Challenges into Research, October 9, 2026"
+                        className="w-full h-auto"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Two-Day International Conference: Knowledge Nexus 2026 (concluded) */}
           <div className="max-w-5xl mx-auto mb-4">
