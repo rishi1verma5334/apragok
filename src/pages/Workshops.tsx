@@ -23,7 +23,7 @@ import balancingLifeBrochure2 from "@/assets/events/balancing-life-brochure-2.jp
 import spectrumBrochure2026Page1 from "@/assets/events/spectrum-conference-brochure-2026-page1.jpg";
 import spectrumBrochure2026Page2 from "@/assets/events/spectrum-conference-brochure-2026-page2.jpg";
 import aiPoweredEducationSixDayWorkshop from "@/assets/events/ai-powered-education-six-day-workshop.jpg";
-import transformingClassroomWorkshop from "@/assets/events/transforming-classroom-challenges-workshop.png.asset.json";
+import transformingClassroomWorkshop from "@/assets/events/transforming-classroom-challenges-workshop.jpg";
 
 
 const features = [
@@ -534,11 +534,11 @@ const Workshops = () => {
                       One-day workshop on action research for reflective and effective teaching, organized by the Research Development & IPR Cell of Modern College of Professional Studies in collaboration with APRA Group of Knowledge. Speaker: Ms. Himani Raizada.
                     </p>
                     <div
-                      onClick={() => openLightbox(transformingClassroomWorkshop.url, "Transforming Classroom Challenges into Research workshop flyer")}
+                      onClick={() => openLightbox(transformingClassroomWorkshop, "Transforming Classroom Challenges into Research workshop flyer")}
                       className="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
                     >
                       <img
-                        src={transformingClassroomWorkshop.url}
+                        src={transformingClassroomWorkshop}
                         alt="Workshop flyer for Transforming Classroom Challenges into Research, October 9, 2026"
                         className="w-full h-auto"
                         loading="lazy"
