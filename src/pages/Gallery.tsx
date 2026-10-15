@@ -111,6 +111,9 @@ import knowledgeNexusPhoto18 from "@/assets/events/knowledge-nexus-photo18.jpeg"
 import knowledgeNexusPhoto19 from "@/assets/events/knowledge-nexus-photo19.jpeg";
 import knowledgeNexusPhoto20 from "@/assets/events/knowledge-nexus-photo20.jpeg";
 import knowledgeNexusPhoto21 from "@/assets/events/knowledge-nexus-photo21.jpeg";
+import transformingClassroomPhoto1 from "@/assets/events/transforming-classroom-photo1.jpeg";
+import transformingClassroomPhoto2 from "@/assets/events/transforming-classroom-photo2.jpeg";
+import transformingClassroomPhoto3 from "@/assets/events/transforming-classroom-photo3.jpeg";
 
 
 type GalleryImage = {
@@ -129,6 +132,32 @@ type GalleryAlbum = {
 };
 
 const albums: GalleryAlbum[] = [
+  {
+    id: "transforming-classroom-challenges",
+    label: "Action Research Workshop",
+    title: "Transforming Classroom Challenges into Research",
+    meta: "One-Day Workshop · October 9, 2026 · Modern College of Professional Studies, Mohan Nagar, Ghaziabad",
+    images: [
+      {
+        id: 124,
+        title: "Memento Presentation",
+        description: "Memento presentation during the action research workshop",
+        image: transformingClassroomPhoto1,
+      },
+      {
+        id: 125,
+        title: "Workshop Participants",
+        description: "Participants and organizers at Modern College of Professional Studies",
+        image: transformingClassroomPhoto2,
+      },
+      {
+        id: 126,
+        title: "Workshop Recognition",
+        description: "Memento presentation in front of the workshop backdrop",
+        image: transformingClassroomPhoto3,
+      },
+    ],
+  },
   {
     id: "knowledge-nexus-2026",
     label: "Knowledge Nexus 2026",
