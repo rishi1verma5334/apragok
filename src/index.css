@@ -174,3 +174,56 @@
     display: none;
   }
 }
+
+@layer utilities {
+  /* Raised soft-3D surface */
+  .neu-raised {
+    box-shadow:
+      6px 6px 16px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      -6px -6px 16px hsl(var(--neu-light) / var(--neu-light-a));
+  }
+
+  /* Pressed-in well (engraved panel) */
+  .neu-inset {
+    box-shadow:
+      inset 3px 3px 7px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      inset -3px -3px 7px hsl(var(--neu-light) / var(--neu-light-a));
+  }
+
+  /* Raised edge for floating bars (header) */
+  .neu-bar {
+    box-shadow: 0 12px 32px -14px hsl(var(--neu-dark) / var(--neu-dark-a));
+  }
+
+  /* Embossed serif headings — engraved letterpress feel */
+  .embossed {
+    text-shadow:
+      0 1px 0 hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.55)),
+      0 -1px 1px hsl(var(--neu-dark) / calc(var(--neu-dark-a) * 0.25));
+  }
+  .dark .embossed {
+    text-shadow:
+      0 -1px 1px hsl(var(--neu-dark) / calc(var(--neu-dark-a) * 0.8)),
+      0 1px 0 hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.6));
+  }
+
+  /* Molded, tactile button: raised at rest, pressed on click */
+  .neu-press {
+    box-shadow:
+      3px 4px 8px -1px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      -3px -4px 8px -1px hsl(var(--neu-light) / var(--neu-light-a)),
+      inset 0 1px 1px hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.7));
+  }
+  .neu-press:hover:not(:disabled) {
+    box-shadow:
+      4px 6px 12px -1px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      -4px -6px 12px -1px hsl(var(--neu-light) / var(--neu-light-a)),
+      inset 0 1px 1px hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.7));
+  }
+  .neu-press:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow:
+      inset 3px 3px 6px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      inset -3px -3px 6px hsl(var(--neu-light) / var(--neu-light-a));
+  }
+}
