@@ -41,6 +41,12 @@
 
     --warm-glow: 28 72% 42%;
 
+    /* Neumorphic (soft-3D) shadow tokens */
+    --neu-dark: 20 30% 14%;
+    --neu-dark-a: 0.14;
+    --neu-light: 0 0% 100%;
+    --neu-light-a: 0.9;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -84,6 +90,12 @@
     --gold-light: 38 75% 58%;
 
     --warm-glow: 35 85% 62%;
+
+    /* Neumorphic shadows adapt to the dark surface */
+    --neu-dark: 0 0% 0%;
+    --neu-dark-a: 0.55;
+    --neu-light: 35 35% 96%;
+    --neu-light-a: 0.05;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
