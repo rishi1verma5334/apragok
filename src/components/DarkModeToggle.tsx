@@ -11,7 +11,7 @@ const DarkModeToggle = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-all duration-300 border border-primary/20"
+      className="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-all duration-300 border border-primary/20 neu-press"
       aria-label="Toggle dark mode"
       whileTap={{ scale: 0.9 }}
     >
