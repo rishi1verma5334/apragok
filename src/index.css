@@ -41,6 +41,12 @@
 
     --warm-glow: 28 72% 42%;
 
+    /* Neumorphic (soft-3D) shadow tokens */
+    --neu-dark: 20 30% 14%;
+    --neu-dark-a: 0.14;
+    --neu-light: 0 0% 100%;
+    --neu-light-a: 0.9;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -85,6 +91,12 @@
 
     --warm-glow: 35 85% 62%;
 
+    /* Neumorphic shadows adapt to the dark surface */
+    --neu-dark: 0 0% 0%;
+    --neu-dark-a: 0.55;
+    --neu-light: 35 35% 96%;
+    --neu-light-a: 0.05;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -120,7 +132,12 @@
   }
 
   .glass-card {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50 shadow-lg;
+    @apply bg-card/70 backdrop-blur-xl border border-border/50;
+    /* Soft-extruded (neumorphic) card surface with a molded top-left sheen */
+    background-image: linear-gradient(115deg, hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.35)) 0%, transparent 42%);
+    box-shadow:
+      8px 8px 22px hsl(var(--neu-dark) / calc(var(--neu-dark-a) * 0.9)),
+      -8px -8px 22px hsl(var(--neu-light) / var(--neu-light-a));
   }
 
   .premium-shadow {
@@ -155,5 +172,58 @@
   }
   .scrollbar-none::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@layer utilities {
+  /* Raised soft-3D surface */
+  .neu-raised {
+    box-shadow:
+      6px 6px 16px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      -6px -6px 16px hsl(var(--neu-light) / var(--neu-light-a));
+  }
+
+  /* Pressed-in well (engraved panel) */
+  .neu-inset {
+    box-shadow:
+      inset 3px 3px 7px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      inset -3px -3px 7px hsl(var(--neu-light) / var(--neu-light-a));
+  }
+
+  /* Raised edge for floating bars (header) */
+  .neu-bar {
+    box-shadow: 0 12px 32px -14px hsl(var(--neu-dark) / var(--neu-dark-a));
+  }
+
+  /* Embossed serif headings — engraved letterpress feel */
+  .embossed {
+    text-shadow:
+      0 1px 0 hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.55)),
+      0 -1px 1px hsl(var(--neu-dark) / calc(var(--neu-dark-a) * 0.25));
+  }
+  .dark .embossed {
+    text-shadow:
+      0 -1px 1px hsl(var(--neu-dark) / calc(var(--neu-dark-a) * 0.8)),
+      0 1px 0 hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.6));
+  }
+
+  /* Molded, tactile button: raised at rest, pressed on click */
+  .neu-press {
+    box-shadow:
+      3px 4px 8px -1px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      -3px -4px 8px -1px hsl(var(--neu-light) / var(--neu-light-a)),
+      inset 0 1px 1px hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.7));
+  }
+  .neu-press:hover:not(:disabled) {
+    box-shadow:
+      4px 6px 12px -1px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      -4px -6px 12px -1px hsl(var(--neu-light) / var(--neu-light-a)),
+      inset 0 1px 1px hsl(var(--neu-light) / calc(var(--neu-light-a) * 0.7));
+  }
+  .neu-press:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow:
+      inset 3px 3px 6px hsl(var(--neu-dark) / var(--neu-dark-a)),
+      inset -3px -3px 6px hsl(var(--neu-light) / var(--neu-light-a));
   }
 }

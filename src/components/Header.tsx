@@ -36,7 +36,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-7 sm:top-9 left-0 right-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/40"
+      className="fixed top-7 sm:top-9 left-0 right-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/40 neu-bar"
     >
       <div className="container mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -94,7 +94,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-full hover:bg-primary/5 transition-colors"
+            className="md:hidden p-2 rounded-full neu-press bg-background/60 border border-border/50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >

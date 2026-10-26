@@ -49,10 +49,10 @@ const ContactSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-primary font-medium tracking-[0.2em] uppercase text-xs mb-4 px-5 py-2 bg-primary/8 rounded-full border border-primary/15">
+          <span className="inline-block text-primary font-medium tracking-[0.2em] uppercase text-xs mb-4 px-5 py-2 bg-primary/8 rounded-full border border-primary/15 neu-inset">
             Get in Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mt-4 mb-6 text-foreground">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mt-4 mb-6 text-foreground embossed">
             Let's Start a <span className="italic text-primary">Conversation</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
