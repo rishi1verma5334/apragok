@@ -30,6 +30,12 @@ const allUpcomingEvents: UpcomingEvent[] = [
     location: "Online (Google Meet)",
     href: "/workshops/knowledge-nexus-2026",
   },
+  {
+    title: "Beyond Boundaries 2026 — National Multidisciplinary Conference",
+    date: "December 19, 2026",
+    location: "Online",
+    href: "/workshops#beyond-boundaries-2026",
+  },
 ];
 
 

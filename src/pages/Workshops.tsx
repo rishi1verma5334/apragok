@@ -24,6 +24,8 @@ import spectrumBrochure2026Page1 from "@/assets/events/spectrum-conference-broch
 import spectrumBrochure2026Page2 from "@/assets/events/spectrum-conference-brochure-2026-page2.jpg";
 import aiPoweredEducationSixDayWorkshop from "@/assets/events/ai-powered-education-six-day-workshop.jpg";
 import transformingClassroomWorkshop from "@/assets/events/transforming-classroom-challenges-workshop.jpg";
+import beyondBoundariesPage1 from "@/assets/events/beyond-boundaries-2026-brochure-1.jpg";
+import beyondBoundariesPage2 from "@/assets/events/beyond-boundaries-2026-brochure-2.jpg";
 
 
 const features = [
@@ -57,6 +59,7 @@ const Workshops = () => {
   const showFdpUpcoming = !isPastDate("June 20, 2026");
   const showSpectrumUpcoming = !isPastDate("June 27, 2026");
   const showKnowledgeNexus = !isPastDate("September 20, 2026");
+  const showBeyondBoundaries = !isPastDate("December 19, 2026");
 
   const showEarlyBird = isBeforeDate("June 5, 2026");
 
@@ -112,6 +115,93 @@ const Workshops = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Upcoming Event - Beyond Boundaries 2026 */}
+      {showBeyondBoundaries && (
+        <section id="beyond-boundaries-2026" className="py-16 bg-primary/10 border-y-2 border-primary/20">
+          <div className="container mx-auto px-4 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-10"
+            >
+              <Badge className="mb-4 bg-primary text-primary-foreground">
+                <Calendar size={14} className="mr-1" />
+                Upcoming Event
+              </Badge>
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-3 sm:mb-4">
+                Beyond Boundaries 2026
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
+                Multidisciplinary Innovations for a Sustainable and Intelligent Future
+              </p>
+              <p className="text-sm text-muted-foreground">
+                One-Day Online National Multidisciplinary Conference · In academic collaboration with Modern College of Professional Studies
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mt-4">
+                <span className="flex items-center gap-1">
+                  <Calendar size={16} className="text-primary" />
+                  December 19, 2026 · 11:00 AM – 5:00 PM
+                </span>
+                <span className="flex items-center gap-1">
+                  <MapPin size={16} className="text-primary" />
+                  Online
+                </span>
+              </div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                onClick={() => openLightbox(beyondBoundariesPage1, "Beyond Boundaries 2026 conference brochure — call for papers and important dates")}
+                className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src={beyondBoundariesPage1}
+                  alt="Beyond Boundaries 2026 brochure — call for papers, conference details, and registration"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                onClick={() => openLightbox(beyondBoundariesPage2, "Beyond Boundaries 2026 conference brochure — author guidelines and themes")}
+                className="rounded-xl overflow-hidden shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src={beyondBoundariesPage2}
+                  alt="Beyond Boundaries 2026 brochure — conference themes and author guidelines"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </motion.div>
+            </div>
+
+            <div className="text-center space-y-3">
+              <div className="flex flex-col sm:flex-row justify-center gap-3">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" asChild>
+                  <a href="https://forms.gle/qieAZy982d3Z63fT6" target="_blank" rel="noopener noreferrer">
+                    Register / Submit Abstract
+                  </a>
+                </Button>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Registration and abstract deadline: 30 November 2026 · Full manuscript deadline: 10 December 2026
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Upcoming Event - Knowledge Nexus 2026 */}
       {showKnowledgeNexus && (
